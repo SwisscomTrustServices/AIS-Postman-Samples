@@ -1,4 +1,4 @@
-# postman-samples
+# About
 This repository contains several Postman samples which can be used when testng AIS features.
 
 # Samples Descriptions
