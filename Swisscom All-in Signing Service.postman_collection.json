@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "8a4ba37a-6a3e-4f06-8887-f412398fc3f8",
+		"name": "Swisscom All-in Signing Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Verify Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"postman.setEnvironmentVariable(\"evidenceid\", jsonData.evidenceId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"disabled": false,
+						"key": "Accept",
+						"value": "application/vnd.sc.ras.evidence.v1+json"
+					},
+					{
+						"disabled": false,
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jurisdiction\":\"zertes\",\n\t\"distinguishedName\":\"cn=Peter Amrhyn, givenname=Peter, surname=Amrhyn, c=CH\",\n\t\"msisdn\": \"{{msisdn}}\",\n    \"assuranceLevel\" : \"4\"\n}"
+				},
+				"url": {
+					"raw": "https://ras.scapp.swisscom.com/api/evidences/verify",
+					"protocol": "https",
+					"host": [
+						"ras",
+						"scapp",
+						"swisscom",
+						"com"
+					],
+					"path": [
+						"api",
+						"evidences",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Request (OnDemand)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"postman.setEnvironmentVariable(\"responseid\", jsonData.SignResponse.OptionalOutputs[\"async.ResponseID\"]);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"SignRequest\": {\n\t\t\"@Profile\": \"http://ais.swisscom.ch/1.1\",\n\t\t\"@RequestID\": \"f6vg9i\",\n\t\t\"InputDocuments\": {\n\t\t\t\"DocumentHash\": {\n\t\t\t\t\"@ID\": \"8lbepe0\",\n\t\t\t\t\"dsig.DigestMethod\": {\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\n\t\t\t\t},\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\n\t\t\t},\n\t\t\t\"DocumentHash\": {\n\t\t\t\t\"@ID\": \"8lbepdfsdfe9\",\n\t\t\t\t\"dsig.DigestMethod\": {\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\n\t\t\t\t},\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\n\t\t\t}\n\t\t},\n\t\t\"OptionalInputs\": {\n\t\t\t\"AddTimestamp\": {\n\t\t\t\t\"@Type\": \"urn:ietf:rfc:3161\"\n\t\t\t},\n\t\t\t\"AdditionalProfile\": [\n\t\t\t\t\"http://ais.swisscom.ch/1.0/profiles/batchprocessing\",\n\t\t\t\t\"urn:oasis:names:tc:dss:1.0:profiles:timestamping\",\n\t\t\t\t\"http://ais.swisscom.ch/1.0/profiles/ondemandcertificate\",\n\t\t\t\t\"urn:oasis:names:tc:dss:1.0:profiles:asynchronousprocessing\",\n\t\t\t\t\"http://ais.swisscom.ch/1.1/profiles/redirect\"\n\t\t\t],\n\t\t\t\"ClaimedIdentity\": {\n\t\t\t\t\"Name\": \"{{claimedidentity}}:OnDemand-Advanced\"\n\t\t\t},\n\t\t\t\"SignatureType\": \"urn:ietf:rfc:3369\",\n\t\t\t\"sc.AddRevocationInformation\": \"\",\n\t\t\t\"sc.SignatureStandard\": \"PADES\",\n\t\t\t\"sc.CertificateRequest\": {\n\t\t\t\t\"sc.DistinguishedName\": \"cn=TEST Peter Amrhyn, givenname=Peter, surname=Amrhyn, c=CH, serialnumber={{evidenceid}}\",\n\t\t\t\t\"sc.StepUpAuthorisation\": {\n\t\t\t\t\t\"sc.Phone\": {\n\t\t\t\t\t\t\"sc.Language\": \"fr\",\n\t\t\t\t\t\t\"sc.MSISDN\": \"{{msisdn}}\",\n\t\t\t\t\t\t\"sc.Message\": \"Please confirm the signing of the tax document\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n"
+				},
+				"url": {
+					"raw": "https://ais.swisscom.com/AIS-Server/rs/v1.0/sign",
+					"protocol": "https",
+					"host": [
+						"ais",
+						"swisscom",
+						"com"
+					],
+					"path": [
+						"AIS-Server",
+						"rs",
+						"v1.0",
+						"sign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pending Request (OnDemand)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"async.PendingRequest\": {\n\t\t\"@Profile\": \"http://ais.swisscom.ch/1.0\",\n\t\t\"OptionalInputs\": {\n\t\t\t\"ClaimedIdentity\": {\n\t\t\t\t\"Name\": \"{{claimedidentity}}:OnDemand-Advanced\"\n\t\t\t},\n\t\t\t\"async.ResponseID\": \"{{responseid}}\"\n\t\t}\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://ais.swisscom.com/AIS-Server/rs/v1.0/pending",
+					"protocol": "https",
+					"host": [
+						"ais",
+						"swisscom",
+						"com"
+					],
+					"path": [
+						"AIS-Server",
+						"rs",
+						"v1.0",
+						"pending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Timestamp",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"SignRequest\": {\n\t\t\"@Profile\": \"http://ais.swisscom.ch/1.1\",\n\t\t\"@RequestID\": \"f6vg9i\",\n\t\t\"InputDocuments\": {\n\t\t\t\"DocumentHash\": {\n\t\t\t\t\"@ID\": \"8lbepe\",\n\t\t\t\t\"dsig.DigestMethod\": {\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\n\t\t\t\t},\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\n\t\t\t},\n\t\t\t\"DocumentHash\": {\n\t\t\t\t\"@ID\": \"8lbepdfsdfe\",\n\t\t\t\t\"dsig.DigestMethod\": {\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\n\t\t\t\t},\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\n\t\t\t}\n\t\t},\n\t\t\"OptionalInputs\": {\n\t\t\t\"AddTimestamp\": {\n\t\t\t\t\"@Type\": \"urn:ietf:rfc:3161\"\n\t\t\t},\n\t\t\t\"AdditionalProfile\": [\n\t\t\t\t\"http://ais.swisscom.ch/1.0/profiles/batchprocessing\",\n\t\t\t\t\"urn:oasis:names:tc:dss:1.0:profiles:timestamping\"\n\t\t\t],\n\t\t\t\"ClaimedIdentity\": {\n\t\t\t\t\"Name\": \"{{claimedidentity}}\"\n\t\t\t},\n\t\t\t\"SignatureType\": \"urn:ietf:rfc:3161\",\n\t\t\t\"sc.AddRevocationInformation\": \"BOTH\",\n\t\t\t\"sc.SignatureStandard\": \"PADES\"\n\t\t}\n\t}\n}\n"
+				},
+				"url": {
+					"raw": "https://ais.swisscom.com/AIS-Server/rs/v1.0/sign",
+					"protocol": "https",
+					"host": [
+						"ais",
+						"swisscom",
+						"com"
+					],
+					"path": [
+						"AIS-Server",
+						"rs",
+						"v1.0",
+						"sign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Request (static)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"SignRequest\": {\r\n\t\t\"@Profile\": \"http://ais.swisscom.ch/1.1\",\r\n\t\t\"@RequestID\": \"f6vg9i\",\r\n\t\t\"InputDocuments\": {\r\n\t\t\t\"DocumentHash\": {\r\n\t\t\t\t\"@ID\": \"8lbepe\",\r\n\t\t\t\t\"dsig.DigestMethod\": {\r\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\r\n\t\t\t\t},\r\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\r\n\t\t\t},\r\n\t\t\t\"DocumentHash\": {\r\n\t\t\t\t\"@ID\": \"8lbepdfsdfe\",\r\n\t\t\t\t\"dsig.DigestMethod\": {\r\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\r\n\t\t\t\t},\r\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\r\n\t\t\t},\r\n\t\t\t\"DocumentHash\": {\r\n\t\t\t\t\"@ID\": \"8lbepe\",\r\n\t\t\t\t\"dsig.DigestMethod\": {\r\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\r\n\t\t\t\t},\r\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\r\n\t\t\t},\r\n\t\t\t\"DocumentHash\": {\r\n\t\t\t\t\"@ID\": \"8lbepdfsdfe\",\r\n\t\t\t\t\"dsig.DigestMethod\": {\r\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\r\n\t\t\t\t},\r\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\r\n\t\t\t},\r\n\t\t\t\"DocumentHash\": {\r\n\t\t\t\t\"@ID\": \"8lbepe\",\r\n\t\t\t\t\"dsig.DigestMethod\": {\r\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\r\n\t\t\t\t},\r\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\r\n\t\t\t},\r\n\t\t\t\"DocumentHash\": {\r\n\t\t\t\t\"@ID\": \"8lbepdfsdfe\",\r\n\t\t\t\t\"dsig.DigestMethod\": {\r\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\r\n\t\t\t\t},\r\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\r\n\t\t\t},\r\n\t\t\t\"DocumentHash\": {\r\n\t\t\t\t\"@ID\": \"8lbepdfsdfe\",\r\n\t\t\t\t\"dsig.DigestMethod\": {\r\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\r\n\t\t\t\t},\r\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\r\n\t\t\t},\r\n\t\t\t\"DocumentHash\": {\r\n\t\t\t\t\"@ID\": \"8lbepe\",\r\n\t\t\t\t\"dsig.DigestMethod\": {\r\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\r\n\t\t\t\t},\r\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\r\n\t\t\t},\r\n\t\t\t\"DocumentHash\": {\r\n\t\t\t\t\"@ID\": \"8lbepdfsdfe\",\r\n\t\t\t\t\"dsig.DigestMethod\": {\r\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\r\n\t\t\t\t},\r\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\r\n\t\t\t},\r\n\t\t\t\"DocumentHash\": {\r\n\t\t\t\t\"@ID\": \"8lbepe\",\r\n\t\t\t\t\"dsig.DigestMethod\": {\r\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\r\n\t\t\t\t},\r\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\r\n\t\t\t},\r\n\t\t\t\"DocumentHash\": {\r\n\t\t\t\t\"@ID\": \"8lbepdfsdfe\",\r\n\t\t\t\t\"dsig.DigestMethod\": {\r\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\r\n\t\t\t\t},\r\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\r\n\t\t\t}\r\n\t\t},\r\n\t\t\"OptionalInputs\": {\r\n\t\t\t\"AddTimestamp\": {\r\n\t\t\t\t\"@Type\": \"urn:ietf:rfc:3161\"\r\n\t\t\t},\r\n\t\t\t\"AdditionalProfile\": [\r\n\t\t\t\t\"http://ais.swisscom.ch/1.0/profiles/batchprocessing\",\r\n\t\t\t\t\"urn:oasis:names:tc:dss:1.0:profiles:timestamping\"\r\n\t\t\t],\r\n\t\t\t\"ClaimedIdentity\": {\r\n\t\t\t\t\"Name\": \"{{static_eu}}\"\r\n\t\t\t},\r\n\t\t\t\"SignatureType\": \"urn:ietf:rfc:3369\",\r\n\t\t\t\"sc.AddRevocationInformation\": {\r\n\t\t\t\t\"@Type\": \"BOTH\"\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://ais.swisscom.com/AIS-Server/rs/v1.0/sign",
+					"protocol": "https",
+					"host": [
+						"ais",
+						"swisscom",
+						"com"
+					],
+					"path": [
+						"AIS-Server",
+						"rs",
+						"v1.0",
+						"sign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signing Service: Sign Request (OnDemand & Templating) Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"postman.setEnvironmentVariable(\"responseid\", jsonData.SignResponse.OptionalOutputs[\"async.ResponseID\"]);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"SignRequest\": {\n\t\t\"@Profile\": \"http://ais.swisscom.ch/1.1\",\n\t\t\"@RequestID\": \"f6vg9i\",\n\t\t\"InputDocuments\": {\n\t\t\t\"DocumentHash\": {\n\t\t\t\t\"@ID\": \"8lbepe0\",\n\t\t\t\t\"dsig.DigestMethod\": {\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\n\t\t\t\t},\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\n\t\t\t}\n\t\t},\n\t\t\"OptionalInputs\": {\n\t\t\t\"AddTimestamp\": {\n\t\t\t\t\"@Type\": \"urn:ietf:rfc:3161\"\n\t\t\t},\n\t\t\t\"AdditionalProfile\": [\n\t\t\t\t\"http://ais.swisscom.ch/1.0/profiles/batchprocessing\",\n\t\t\t\t\"urn:oasis:names:tc:dss:1.0:profiles:timestamping\",\n\t\t\t\t\"http://ais.swisscom.ch/1.0/profiles/ondemandcertificate\",\n\t\t\t\t\"urn:oasis:names:tc:dss:1.0:profiles:asynchronousprocessing\",\n\t\t\t\t\"http://ais.swisscom.ch/1.1/profiles/redirect\"\n\t\t\t],\n\t\t\t\"ClaimedIdentity\": {\n\t\t\t\t\"Name\": \"{{claimedidentity}}:OnDemand-Advanced\"\n\t\t\t},\n\t\t\t\"SignatureType\": \"urn:ietf:rfc:3369\",\n\t\t\t\"sc.AddRevocationInformation\": \"\",\n\t\t\t\"sc.SignatureStandard\": \"PADES\",\n\t\t\t\"sc.CertificateRequest\": {\n\t\t\t\t\"sc.DistinguishedName\": \"cn=Test ${given_name} ${family_name},givenname=${given_name}, surname=${family_name}, c=${country}, serialNumber=${evidence_id}\",\n\t\t\t\t\"sc.StepUpAuthorisation\": {\n\t\t\t\t\t\"sc.Phone\": {\n\t\t\t\t\t\t\"sc.Language\": \"fr\",\n\t\t\t\t\t\t\"sc.MSISDN\": \"{{msisdn}}\",\n\t\t\t\t\t\t\"sc.Message\": \"Please confirm the signing of the tax document\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n"
+				},
+				"url": {
+					"raw": "https://ais.swisscom.com/AIS-Server/rs/v1.0/sign",
+					"protocol": "https",
+					"host": [
+						"ais",
+						"swisscom",
+						"com"
+					],
+					"path": [
+						"AIS-Server",
+						"rs",
+						"v1.0",
+						"sign"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
