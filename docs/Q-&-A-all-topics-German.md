@@ -1,4 +1,6 @@
-# Questions & answers related to AIS, Postman Samples, RA, MobileID, Billing, etc.
+# Fragen & Antworten 
+
+* Die Fragen und Antworten unten sind auf AIS, Postman Beispiele, RA Service, MobileID, Billing, etc. bezogen.
 
 **1.	Die Firma X will jetzt von AIS Preprod auf die AIS Prod umstellen da sie mit dem Testen fertig sind. Kannst du mir bitte sagen 
 von vertraglichen her welche Schritte die Firma X machen muss und wie das im Allgemeinen abläuft, was muss da unterschrieben werden, etc.?**
