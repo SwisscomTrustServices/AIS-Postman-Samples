@@ -11,6 +11,8 @@ Demo Video about using the samples in Postman.
 
 or
 
+<video src="https://github.com/SwisscomTrustServices/AIS-Postman-Samples/blob/main/20201201_PostmanSetup_mTLS-configuration.mp4" width="320" height="200" controls preload></video>
+
 <iframe width="560" height="315"
 src="https://github.com/SwisscomTrustServices/AIS-Postman-Samples/blob/main/20201201_PostmanSetup_mTLS-configuration.mp4" 
 frameborder="0" 
