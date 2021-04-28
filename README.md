@@ -2,7 +2,12 @@
 This repository contains several Postman samples which can be used when testng AIS features.
 
 Before starting to use these Postman Samples have a look at our AIS refence guide and other references we provide.
+
+Documentation Repository
+
 * https://trustservices.swisscom.com/downloads/
+
+AIS reference Guide
 
 * https://documents.swisscom.com/product/1000255-Digital_Signing_Service/Documents/Reference_Guide/Reference_Guide-All-in-Signing-Service-en.pdf
 
