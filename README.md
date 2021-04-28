@@ -11,7 +11,7 @@ Demo Video about using the samples in Postman.
 
 or, raw mp4 video file, download file and play.
 
-https://github.com/SwisscomTrustServices/AIS-Postman-Samples/blob/main/20201201_PostmanSetup_mTLS-configuration.mp4
+* https://github.com/SwisscomTrustServices/AIS-Postman-Samples/blob/main/20201201_PostmanSetup_mTLS-configuration.mp4
 
 
 # Samples Descriptions
