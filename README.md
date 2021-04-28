@@ -1,13 +1,16 @@
 # About
 This repository contains several Postman samples which can be used when testng AIS features.
 
-Before starting to use these Postman Samples have a look at our AIS refence guide.
-https://documents.swisscom.com/product/1000255-Digital_Signing_Service/Documents/Reference_Guide/Reference_Guide-All-in-Signing-Service-en.pdf
+Before starting to use these Postman Samples have a look at our AIS refence guide and other references we provide.
+* https://trustservices.swisscom.com/downloads/
+
+* https://documents.swisscom.com/product/1000255-Digital_Signing_Service/Documents/Reference_Guide/Reference_Guide-All-in-Signing-Service-en.pdf
 
 Demo Video about using the samples in Postman.
-https://onedrive.live.com/?authkey=%21AOOgsr9maiK5feg&cid=2D4A6425D2D29B86&id=2D4A6425D2D29B86%21668&parId=2D4A6425D2D29B86%21662&o=OneUp
-or
+* https://onedrive.live.com/?authkey=%21AOOgsr9maiK5feg&cid=2D4A6425D2D29B86&id=2D4A6425D2D29B86%21668&parId=2D4A6425D2D29B86%21662&o=OneUp
 
+or
+* todo.
 
 # Samples Descriptions
 
