@@ -14,7 +14,7 @@ AIS reference Guide
 ## Demo Video: Postman Samples
 * https://onedrive.live.com/?authkey=%21AOOgsr9maiK5feg&cid=2D4A6425D2D29B86&id=2D4A6425D2D29B86%21668&parId=2D4A6425D2D29B86%21662&o=OneUp
 
-or, raw mp4 video file, download file and play.
+or alternativelly if you cannot access the first link, you need to download the raw video file using the following link.
 
 * https://github.com/SwisscomTrustServices/AIS-Postman-Samples/blob/main/20201201_PostmanSetup_mTLS-configuration.mp4
 
