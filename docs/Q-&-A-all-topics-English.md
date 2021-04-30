@@ -67,7 +67,7 @@ How is it currently implemented in the AIS? A short description would help me a 
 * https://trustservices.swisscom.com/en/smart-registration-service/
 * I have to register in the Swisscom Shop, so I can then also sign in Switzerland.
 
-**11. Can I skip the RA registration app and the usual SRS customer registration and benefit from the Fasttrack program?
+**11. Can I skip the RA app, Video or similar and benefit from the Fast Track mode?
 
 * As a short summary and internal collected feedbacks.
  
@@ -78,9 +78,8 @@ How is it currently implemented in the AIS? A short description would help me a 
  * Technically - How to setup:
 
 <details><summary>
-  Markdown between html tags works when there's an empty line before it.
+  Click to see the details.
   </summary>
-  Please confirm:
  
   * (NA) A.	On request, the signatory receives the document to be signed displayed in full and downloadable before the declaration of intent requesting a signature and after signature, and therefore can be sure that this specific document is signed. This is an obliged requirement!
  
@@ -88,25 +87,28 @@ How is it currently implemented in the AIS? A short description would help me a 
  
  	* C.	The subscriber acknowledges that a signature can only be executed after acceptance of the terms of use. The terms of use must be shown to the signatory and accepted before the first signing. The signatory must state that it has read, understood and accepted the terms. An opt-in method (e.g. tick box) should be used. Always the latest version of the terms should be shown by use of the following link: https://www.swissdigicert.ch/sdcs/portal/open_pdf?file=english%2FEN_Terms_and_Conditions_CH_pers.pdf 
  
- 	D.	The subscriber application ensures that it has been checked beforehand (e.g. when registering for the account) that the person signing possesses the mobile phone number that will be used later. This can be ensured, for example, by checking the phone number specified by the signer during registration via an SMS service (does not have to be Swisscom SMS service).
-1.1	Contents of the signature: Signature certificate
-The distinguished name in the signature certificate is as follows:
-cn=                        <Mobile number of the signatory with prefix "417">
-pseudonym=          <Mobile number of the signatory with prefix "417">
-c=                          "CH"
-serialnumber=        <current date with format yyyymmdd-<Mobile number of the signatory with prefix "417">>
-a)	You will test the settings at your Test Account (see description below), in addition with the pdfbox examples of Paul
-b)	4.1.3 Own Registration Method with Session Token/OTP only 
-c)	Intentional use: The easiest and fastest way to test the connection to the All-in-signing service. No RA app or Smart Registration Service is used for identification, or you do not want test without identification of the RA app or Smart Registration Service during the test phase and first test the signature connection only. A 1-factor procedure (SMS with one-time password) is used for signature release, which would only be suitable for the use of advanced signatures. Or you plan to use another second factor. 
-d)	Access to the test account jurisdiction CH (ZertES) with the following claimed ID: 
-e)	ais-90days-trial-OTP:OnDemand-Advanced4 
-f)	Access to the test account jurisdiction EU (eIDAS) with the following claimed ID: 
-g)	ais-90days-trial-OTP:OnDemand-Advanced-EU
-h)	 
-i)	 
-j)	we will configure “OTP-only“ for your productive FES Account
+ 	* D.	The subscriber application ensures that it has been checked beforehand (e.g. when registering for the account) that the person signing possesses the mobile phone number that will be used later. This can be ensured, for example, by checking the phone number specified by the signer during registration via an SMS service (does not have to be Swisscom SMS service).
+ 	
+* 1.1	Contents of the signature: Signature certificate
+* The distinguished name in the signature certificate is as follows:
 
+* cn=<Mobile number of the signatory with prefix "417">
 
+* pseudonym=<Mobile number of the signatory with prefix "417">
 
+* c="CH"
+
+* serialnumber=<current date with format yyyymmdd-<Mobile number of the signatory with prefix "417">>
+
+* a)	You will test the settings at your Test Account (see description below), in addition with the pdfbox examples of Paul
+* b)	4.1.3 Own Registration Method with Session Token/OTP only 
+* c)	Intentional use: The easiest and fastest way to test the connection to the All-in-signing service. No RA app or Smart Registration Service is used for identification, or you do not want test without identification of the RA app or Smart Registration Service during the test phase and first test the signature connection only. A 1-factor procedure (SMS with one-time password) is used for signature release, which would only be suitable for the use of advanced signatures. Or you plan to use another second factor. 
+* d)	Access to the test account jurisdiction CH (ZertES) with the following claimed ID: 
+* e)	ais-90days-trial-OTP:OnDemand-Advanced4 
+* f)	Access to the test account jurisdiction EU (eIDAS) with the following claimed ID: 
+* g)	ais-90days-trial-OTP:OnDemand-Advanced-EU
+* h)	-
+* i)	-
+* j)	we will configure “OTP-only“ for your productive FES Account
   </details>
 
