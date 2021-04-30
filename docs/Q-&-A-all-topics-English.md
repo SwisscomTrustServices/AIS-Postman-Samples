@@ -1,11 +1,10 @@
 # Questions & Answers 
 
-## The Q&As below are related to AIS, Postman Samples, RA Service, MobileID, Billing, and the POC process, etc.
-
-<div class="text-red mb-2">
   * Please first see the Q&As in the next link afterwards consult these questions and answers below.
-</div>
-* https://trustservices.swisscom.com/en/faq/
+  * https://trustservices.swisscom.com/en/faq/
+
+## The Q&As below are related to AIS, Postman Samples, RA Service, MobileID, Billing, and the POC process, etc.
+===============================================================================================================
 
 
 **1. Company X now wants to switch from AIS Preprod to AIS Prod because they have finished testing. Can you please tell me
