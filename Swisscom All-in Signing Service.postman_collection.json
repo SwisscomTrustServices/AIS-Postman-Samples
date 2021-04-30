@@ -38,7 +38,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"jurisdiction\":\"zertes\",\n\t\"distinguishedName\":\"cn=Max Maximus, givenname=Max, surname=Amrhyn, c=CH\",\n\t\"msisdn\": \"{{msisdn}}\",\n    \"assuranceLevel\" : \"4\"\n}"
+					"raw": "{\n\t\"jurisdiction\":\"zertes\",\n\t\"distinguishedName\":\"cn=Max Maximus, givenname=Max, surname=Maximus, c=CH\",\n\t\"msisdn\": \"{{msisdn}}\",\n    \"assuranceLevel\" : \"4\"\n}"
 				},
 				"url": {
 					"raw": "https://ras.scapp.swisscom.com/api/evidences/verify",
