@@ -28,6 +28,7 @@ how does that work specifically?**
 * https://internal.bizdocs.swisscom.com/dmis/start/SitePages/ProductDetail.aspx?PURL=https://internal.bizdocs.swisscom.com/dmis/1000255-All-in-Signing-Service
 
  </details>
+ 
 **3. After an AIS signature link has been generated for a user in order to be able to sign with it, how long is this link valid, how many days?**
 <details><summary>
   Click to see the details. 
