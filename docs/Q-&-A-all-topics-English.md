@@ -2,10 +2,11 @@
 
 ## The Q&As below are related to AIS, Postman Samples, RA Service, MobileID, Billing, and the POC process, etc.
 
-```diff
--Please first see the Q&As in the next link afterwards consult these questions and answers below.
-https://trustservices.swisscom.com/en/faq/
-```
+<div class="text-red mb-2">
+  * Please first see the Q&As in the next link afterwards consult these questions and answers below.
+</div>
+* https://trustservices.swisscom.com/en/faq/
+
 
 **1. Company X now wants to switch from AIS Preprod to AIS Prod because they have finished testing. Can you please tell me
 From a contractual point of view, which steps company X has to take and how it works in general, what has to be signed, etc.?**
@@ -162,8 +163,6 @@ How is it currently implemented in the AIS? A short description would help me a 
 * e)	ais-90days-trial-OTP:OnDemand-Advanced4 
 * f)	Access to the test account jurisdiction EU (eIDAS) with the following claimed ID: 
 * g)	ais-90days-trial-OTP:OnDemand-Advanced-EU
-* h)	-
-* i)	-
-* j)	we will configure “OTP-only“ for your productive FES Account
+* h)	we will configure “OTP-only“ for your productive FES Account
   </details>
 
