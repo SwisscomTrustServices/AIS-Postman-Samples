@@ -67,18 +67,16 @@ How is it currently implemented in the AIS? A short description would help me a 
 * https://trustservices.swisscom.com/en/smart-registration-service/
 * I have to register in the Swisscom Shop, so I can then also sign in Switzerland.
 
-**11. Can I skip the RA app, Video or similar and benefit from the Fast Track mode?
-
-* As a short summary and internal collected feedbacks.
+**11. Can I skip the RA app, Video or similar and benefit from the Fast Track mode?**
  
  * Business/ Availability: Fast Track Mode (AES)
  * only for +41 numbers/ only for swiss mobile users
  * NO support for non-+41-users within EU
  * no need to get identified via RA APP, Video or similar
- * Technically - How to setup:
+ * Technically, how to setup, see below.
 
 <details><summary>
-  Click to see the details.
+  Click to see the details. 
   </summary>
  
   * (NA) A.	On request, the signatory receives the document to be signed displayed in full and downloadable before the declaration of intent requesting a signature and after signature, and therefore can be sure that this specific document is signed. This is an obliged requirement!
