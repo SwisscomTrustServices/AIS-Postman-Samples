@@ -77,31 +77,16 @@ How is it currently implemented in the AIS? A short description would help me a 
  * no need to get identified via RA APP, Video or similar
  * Technically - How to setup:
 
-## collapsible markdown?
-
-<details>
-<summary>
-
-# CLICK ME
-</summary>
-<p>
-
-#### yes, even hidden code blocks!
-
-```python
-print("hello world!")
-```
-
-Please confirm:
+<details><summary>
+  Markdown between html tags works when there's an empty line before it.
+  </summary>
+  Please confirm:
  
-(NA)
- 	A.	On request, the signatory receives the document to be signed displayed in full and downloadable before the declaration of intent requesting a signature and after signature, and therefore can be sure that this specific document is signed. This is an obliged requirement!
+  * (NA) A.	On request, the signatory receives the document to be signed displayed in full and downloadable before the declaration of intent requesting a signature and after signature, and therefore can be sure that this specific document is signed. This is an obliged requirement!
  
-(NA)
- 	B.	The signatory is informed before or during the expression of will that the signature is an "advanced" signature. This is an obliged requirement!
+  * (NA) B.	The signatory is informed before or during the expression of will that the signature is an "advanced" signature. This is an obliged requirement!
  
- 	C.	The subscriber acknowledges that a signature can only be executed after acceptance of the terms of use. The terms of use must be shown to the signatory and accepted before the first signing. The signatory must state that it has read, understood and accepted the terms. An opt-in method (e.g. tick box) should be used. Always the latest version of the terms should be shown by use of the following link: https://www.swissdigicert.ch/sdcs/portal/open_pdf?file=english%2FEN_Terms_and_Conditions_CH_pers.pdf 
-
+ 	* C.	The subscriber acknowledges that a signature can only be executed after acceptance of the terms of use. The terms of use must be shown to the signatory and accepted before the first signing. The signatory must state that it has read, understood and accepted the terms. An opt-in method (e.g. tick box) should be used. Always the latest version of the terms should be shown by use of the following link: https://www.swissdigicert.ch/sdcs/portal/open_pdf?file=english%2FEN_Terms_and_Conditions_CH_pers.pdf 
  
  	D.	The subscriber application ensures that it has been checked beforehand (e.g. when registering for the account) that the person signing possesses the mobile phone number that will be used later. This can be ensured, for example, by checking the phone number specified by the signer during registration via an SMS service (does not have to be Swisscom SMS service).
 1.1	Contents of the signature: Signature certificate
@@ -120,4 +105,8 @@ g)	ais-90days-trial-OTP:OnDemand-Advanced-EU
 h)	 
 i)	 
 j)	we will configure “OTP-only“ for your productive FES Account
+
+
+
+  </details>
 
