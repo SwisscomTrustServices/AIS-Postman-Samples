@@ -9,7 +9,7 @@
 From a contractual point of view, which steps company X has to take and how it works in general, what has to be signed, etc.?**
 
 <details><summary>
-  Click to see the details. 
+  Click to see the answer. 
   </summary>
 
 * Sales, in this case Marcel (Marcel.Kurz@swisscom.com), instructs us to draw up the desired contract:
@@ -24,7 +24,7 @@ Does the user continue to use the flat rate after signing X times (e.g. 3 times)
 how does that work specifically?**
 
 <details><summary>
-  Click to see the details. 
+  Click to see the answer. 
   </summary>
 
 * The customer chooses the billing variant in the corresponding contract, but the option of billing per user / month is only available to resellers or when ordering via partners, for end customers there is only "per signature". You can find all contract templates in DMIS:
@@ -34,7 +34,7 @@ how does that work specifically?**
  
 **3. After an AIS signature link has been generated for a user in order to be able to sign with it, how long is this link valid, how many days?**
 <details><summary>
-  Click to see the details. 
+  Click to see the answer. 
   </summary>
  
 * If this means the SAS confirmation via SAS, you will find the answer in the Installation Guidance, Section 5.7.3: is configurable, the default is 10 minutes. I don't know more about it, because we don't have a SAS connection for our test environment and therefore don't test it.
@@ -46,7 +46,7 @@ https://trustservices.swisscom.com/downloads/
 **4. Are there any costs for video authentication after the user has authenticated himself or after this AIS link has been generated? The company X
 wants to know exactly when there will be costs.**
 <details><summary>
-  Click to see the details. 
+  Click to see the answer. 
   </summary>
  
 * Please ask Marietta Heule (Marietta.Heule@swisscom.com) and / or Marcel (Marcel.Kurz@swisscom.com) in detail.
@@ -56,7 +56,7 @@ wants to know exactly when there will be costs.**
 **5. Please check in the Postman samples that: is replaced with.**
 
 <details><summary>
-  Click to see the details. 
+  Click to see the answer. 
   </summary>
 
 * For example if you have in the Postman Sample: "sc: SignatureStandard" replace it with "sc.SignatureStandard".
@@ -67,7 +67,7 @@ wants to know exactly when there will be costs.**
 Is it possible to add the name when signing?**
 
 <details><summary>
-  Click to see the details. 
+  Click to see the answer. 
   </summary>
 
 * I assume you mean the placeholders for values from the RA evidence in the subject of on-demand signatures. Except for escaping based on the rules for DNs (RFC 2253), this is essentially a text replacement. The templates build on this and provide frequently used subjects with placeholders. You can find our documentation on this in Sections 5.9.2 and 5.9.3 in the Installation Guidance. Regarding your actual question: yes, you can put together a subject with placeholders and then assign your own value to GIVENNAME or CN.
@@ -78,7 +78,7 @@ Is it possible to add the name when signing?**
 Direction of what happens if the user has given their name incorrectly. Therefore it is relevant for a successful signature that the name is given correctly, right?**
 
 <details><summary>
-  Click to see the details. 
+  Click to see the answer. 
   </summary>
 
 * There are two tests: On the one hand, the finished subject must match the DN pattern of the on-demand service. If it is a qualified signature, the subject is also given to the RAS for verification ("Evidence Verify Call"). How your DN patterns look like and what exactly the RAS checks can be found here under Smart Registration Service.
@@ -90,7 +90,7 @@ Direction of what happens if the user has given their name incorrectly. Therefor
 How does it work at the moment?**
 
 <details><summary>
-  Click to see the details. 
+  Click to see the answer. 
   </summary>
 
 * No. Everything is the same in AIS. As far as I know, there is a workaround for this in the PDFBox Client.
@@ -102,7 +102,7 @@ How does it work at the moment?**
 How is it currently implemented in the AIS? A short description would help me a lot.**
 
 <details><summary>
-  Click to see the details. 
+  Click to see the answer. 
   </summary>
 
 * The client selects an on-demand service for the signature. This refers to a CA server. The level of assurance and the jurisdiction for the signature are derived from the name of this CA server. How is described, among other things, in the Admin UI User Manual, Section 3.4.1. The "Data Flow Issues" currently being processed by us want to change exactly that, so that these properties are no longer defined by naming conventions, but instead end up explicitly in the database. According to the previous statement, you cannot select EIDAS or ZertES, it will certainly be adjustable later.
@@ -112,7 +112,7 @@ How is it currently implemented in the AIS? A short description would help me a 
 **10. POC implementation, what do I have to pay attention to?**
 
 <details><summary>
-  Click to see the details. 
+  Click to see the answer. 
   </summary>
 
 * I have to do a video registration, so I can only sign in the EU.
@@ -125,7 +125,7 @@ How is it currently implemented in the AIS? A short description would help me a 
 **11. Can I skip the RA app, Video or similar and benefit from the Fast Track mode?**
 
 <details><summary>
-  Click to see the details. 
+  Click to see the answer. 
   </summary>
  
  * Business/ Availability: Fast Track Mode (AES)
