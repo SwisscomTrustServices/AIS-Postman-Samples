@@ -1,7 +1,7 @@
 # About
-This repository contains several Postman samples which can be used when testng AIS features.
+This repository contains several Postman (https://www.postman.com/) samples which can be used when testng AIS features.
 
-Before starting to use these Postman Samples have a look at our AIS refence guide and other references we provide.
+Before starting to use these Postman samples have a look at our AIS refence guide and other references we provide.
 
 Documentation Repository
 
