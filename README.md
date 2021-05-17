@@ -50,4 +50,4 @@ Timestamp (batch files) flow: This request can be used to sign multiple url-enco
 * http://localhost:8080/ais/dynamic?inputFilePath={{input_file_path}}&outputFilePath={{output_file_path}}&signatureMode={{signature_mode}}
 Dynamic file: This request can be used to sign a PDF identified by the file path on the local machine and to write the signed document on the 
   provided output file path. It uses the flow specified by the `signatureMode` query param. The possible values are: `ON_DEMAND_WITH_STEP_UP`, 
-  `ON_DEMAND`, `STATIC` and `TIMESTAMP`. As a response, the status message of the operation will be returned.
+  `ON_DEMAND` (with RA service), `STATIC` and `TIMESTAMP`. As a response, the status message of the operation will be returned.
