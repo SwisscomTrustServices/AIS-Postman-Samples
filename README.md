@@ -35,16 +35,19 @@ Singing Service: Pending Request (OnDemand): This call is needed to collect the 
 
 ## iText7 Demo Samples Description
 
+To be able to run the following requests, you need to configure and run locally the 
+[iText7 AIS Demo app](https://github.com/SwisscomTrustServices/itext7-ais-demo).
+
 * http://localhost:8080/ais/on-demand-step-up-file?inputFilePath={{input_file_path}}&outputFilePath={{output_file_path}}
 On Demand Advanced with Stepup (MID/PWD/OTP) flow: This request can be used to sign a PDF identified by the file path on the local machine and to 
   write the signed document on the provided output file path. As a response, the status message of the operation will be returned.
   
 * http://localhost:8080/ais/static-multipart
-Static (multipart file) flow: This request can be used to sign an url-encoded form PDF. As a response, the signed PDF encoded into ``base 64`` 
+Static (multipart file) flow: This request can be used to sign a form-data PDF. As a response, the signed PDF encoded into ``base 64`` 
   will be returned.
   
 * http://localhost:8080/ais/timestamp-batch
-Timestamp (batch files) flow: This request can be used to sign multiple url-encoded form PDFs in a batch. As a response, the signed PDF encoded into 
+Timestamp (batch files) flow: This request can be used to sign multiple form-data PDFs in a batch. As a response, the signed PDF encoded into 
   ``base 64`` will be returned.
   
 * http://localhost:8080/ais/dynamic?inputFilePath={{input_file_path}}&outputFilePath={{output_file_path}}&signatureMode={{signature_mode}}
