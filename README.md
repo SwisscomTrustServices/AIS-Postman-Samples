@@ -19,7 +19,7 @@ or alternatively if you cannot access the first link, you need to download the r
 * https://github.com/SwisscomTrustServices/AIS-Postman-Samples/blob/main/20201201_PostmanSetup_mTLS-configuration.mp4
 
 
-## Samples Descriptions
+## RA Samples Description
 
 * https://ras.scapp.swisscom.com/api/evidences/verify
 RA Service Lookup: This request can be used to check if a user (phoneNumber) is already registered at the RA. Please note, that in the case of reinstalling the MobileID App without using the Backup Code this request response is still successful, but the user is not able to create a qualified signature without a re-identification.
@@ -33,7 +33,7 @@ RA Service Sign Request (OnDemand) Batch: This is the same API call as RA Servic
 * https://ais.swisscom.com/AIS-Server/rs/v1.0/pending
 Singing Service: Pending Request (OnDemand): This call is needed to collect the signature status. The status is pending until the user confirms the second factor using the MOBILE ID App. 
 
-## iText7 Demo Samples
+## iText7 Demo Samples Description
 
 * http://localhost:8080/ais/on-demand-step-up-file?inputFilePath={{input_file_path}}&outputFilePath={{output_file_path}}
 On Demand Advanced with Stepup (MID/PWD/OTP) flow: This request can be used to sign a PDF identified by the file path on the local machine and to 
