@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "69f79cbb-86a0-43a3-9be5-e447a10197e2",
+		"name": "Swisscom iText7 Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "On Demand with Step Up File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ais/on-demand-step-up-file?inputFilePath={{input_file_path}}&outputFilePath={{output_file_path}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ais",
+						"on-demand-step-up-file"
+					],
+					"query": [
+						{
+							"key": "inputFilePath",
+							"value": "{{input_file_path}}"
+						},
+						{
+							"key": "outputFilePath",
+							"value": "{{output_file_path}}"
+						}
+					]
+				},
+				"description": "Using the `itext7-ais-demo` project which runs `locally`, request to sign a PDF identified by the file path on the local machine and to write the signed document on the provided output file path. This request uses the `On Demand with Step Up` flow (PWD/OTP/MID). As a response, the status message of the operation will be returned."
+			},
+			"response": []
+		},
+		{
+			"name": "Static Multipart File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "inputFile",
+							"type": "file",
+							"src": "/C:/Projects/Swisscom/files/test-inputs/test1.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/ais/static-multipart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ais",
+						"static-multipart"
+					]
+				},
+				"description": "Using the `itext7-ais-demo` project which runs `locally`, request to sign a PDF using the `Static` flow. As a response, the signed PDF encoded into `base 64` will be returned."
+			},
+			"response": []
+		},
+		{
+			"name": "Timestamp Batch Files",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "inputFiles",
+							"type": "file",
+							"src": [
+								"/C:/Projects/Swisscom/files/test-inputs/poc/test1.pdf",
+								"/C:/Projects/Swisscom/files/test-inputs/poc/test2.pdf"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/ais/timestamp-batch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ais",
+						"timestamp-batch"
+					]
+				},
+				"description": "Using the `itext7-ais-demo` project which runs `locally`, request to sign multiple PDFs in batch using the `Timestamp` flow. As a response, the signed PDFs encoded into `base 64` will be returned."
+			},
+			"response": []
+		},
+		{
+			"name": "Dynamic File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ais/dynamic?inputFilePath={{input_file_path}}&outputFilePath={{output_file_path}}&signatureMode={{signature_mode}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ais",
+						"dynamic"
+					],
+					"query": [
+						{
+							"key": "inputFilePath",
+							"value": "{{input_file_path}}"
+						},
+						{
+							"key": "outputFilePath",
+							"value": "{{output_file_path}}"
+						},
+						{
+							"key": "signatureMode",
+							"value": "{{signature_mode}}"
+						}
+					]
+				},
+				"description": "Using the `itext7-ais-demo` project which runs `locally`, request to sign a PDF identified by the file path on the local machine and to write the signed document on the provided output file path. This request uses the flow specified by the `signatureMode` query param. The possible values are: `ON_DEMAND_WITH_STEP_UP`, `ON_DEMAND`, `STATIC` and `TIMESTAMP`. As a response, the status message of the operation will be returned."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "input_file_path",
+			"value": "C:/Projects/Swisscom/files/test-inputs/test1.pdf"
+		},
+		{
+			"key": "output_file_path",
+			"value": "C:/Projects/Swisscom/files/test-inputs/test1-signed.pdf"
+		},
+		{
+			"key": "signature_mode",
+			"value": "ON_DEMAND"
+		}
+	]
+}
