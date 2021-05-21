@@ -126,20 +126,15 @@ How is it currently implemented in the AIS? A short description would help me a 
 <details><summary>
   Click to see the answer. 
   </summary>
-* LOA3 ermöglicht eine fortgeschrittene Signatur
-* LOA4 ermöglicht eine Qualifizierte Signatur
+ 
+* LOA3 enables advanced signature
 
-* Die Gründe eine Herabstufung von 4 auf 3 können sein:
--	Die Identifikation ist älter als 5 Jahre
--	Das ID Dokument welches für die Identifikation genutzt wurde ist abgelaufen (der Nutzer bekommt hierfür ein SMS als Warnung 30 Tage und 90 Tage vorher)
--	Der Nutzer hat seit der Identifikation sein Authentisierungsmittel gewechselt
+* LOA4 enables a qualified signature
 
-* Authentisierungsmittelwechsel bedeutet:
--	Passwort gewechsel (Link "Forgotten Passwort")
--	SIM Wechsel
--	MID Reset (Ohne Recovery Code)
--	MID APP installiert und aktiviert (Ohne Recovery Code)
--	Vertragswechsel SIM Karte (Ohne Recovery Code)
+* The reasons for a downgrade from LOA 4 to LOA 3 can be: The identification is older than 5 years, The ID document that was used for identification has expired (the user receives an SMS as a warning 30 days and 90 days beforehand), and The user has changed his means of authentication since the identification
+
+* Change of authentication means means: Change password (link "Forgotten Password"), SIM change, MID reset (without recovery code), MID APP installed and activated (without recovery code), SIM card contract change (without recovery code)
+ 
 </details>
 
 **12. Can I skip the RA app, Video or similar and benefit from the Fast Track mode?**
