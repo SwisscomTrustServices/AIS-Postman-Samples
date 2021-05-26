@@ -137,11 +137,46 @@ How is it currently implemented in the AIS? A short description would help me a 
  
 </details>
 
-**12. Can I skip the RA app, Video or similar and benefit from the Fast Track mode?**
+**12. The ETSI checker shows two errors when using static signatures in the generated report in position 5 and 21, why is this the case?**
+<details><summary>
+  Click to see the answer. 
+  </summary>
+ 
+* The ETSI Signature Conformance Checker does the following (as per their homepage): https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsignatures-conformance-checker.etsi.org%2Fpub%2Findex.php&data=04%7C01%7CPaul.Muntean%40swisscom.com%7Cb8b18dbf28584312b2b308d91f7c15a0%7C364e5b87c1c7420d9beec35d19b557a1%7C1%7C0%7C637575440056859327%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=G2QJbPyJOeSZ9Or2M0uZpIF620boeAPf%2FcwLNj85P50%3D&reserved=0
+
+ * The tool performs conformance tests on: XadES, CadES, ASiC, PAdES
+ * Verify the conformity of the ETSI Advanced Electronic Signatures
+ * It checks the structure of the AdES signature versus the ETSI Specifications
+
+ * When signing the document with a timestamp signature, the resulting document has just a timestamp signature, not an xAdES (Advanced Electronic) signature. Therefore, the checker correctly complains that a timestampped-only document does not conform to the expected signature:
+
+ * ETSI report link:
+https://signatures-conformance-checker.etsi.org/protected/PAdESConf/TestCases/pstoia_ea473cb707cf41e1/localdoc1signed20210421121619timestamp/index.html
+
+ * Error 5: 
+ * Location-{CodeTest}:SubFilter-{CheckIfValueIsOneOfDefined}
+ * Found value: 'ETSI.RFC3161''. Allowed values: adbe.pkcs7.detached,adbe.pkcs7.sha1,ETSI.CAdES.detached
+ 
+ * This is because the timestamp signature is of type “ETSI.RFC3161”, which is not one of the ones listed above.
+
+ * Error 21:
+ * Location-{CodeTest}:Contents/CAdESSignature-{VerifyCMSOrCAdESWithinPAdES}
+ * The CRYPTOGRAPHIC VERIFICATION of the SIGNATURE whose certificate has been issued by "CN=Swisscom TSS CA 4.1,OU=Digital Certificate Services,2.5.4.97=VATAT-U64741248,O=Swisscom IT Services Finance S.E.,C=AT" to "CN=Swisscom TSU 4.1,OU=Digital Certificate Services,O=Swisscom IT Services Finance S.E.,2.5.4.97=VATAT-U64741248,C=AT", and whose serial number is 70191010760937081556668692045972174202, HAS FAILED. Additional details follow: message-digest attribute value does not match calculated value
+ 
+ * This is because the timestampped content is not a CAdES signature content format.
+
+ * So, in conclusion, the timestamping of a document is a particular case of signing a document. The ETSI Checker is not to be used for this specific use case. All the other types of signatures should render all-green reports in the checker.
+
+ 
+</details>
+
+**13. Can I skip the RA app, Video or similar and benefit from the Fast Track mode?**
 
 <details><summary>
   Click to see the answer. 
   </summary>
+ 
+ * ETSI checker: https://signatures-conformance-checker.etsi.org/pub/index.php
  
  * Business/ Availability: Fast Track Mode (AES)
  * only for +41 numbers/ only for swiss mobile users
