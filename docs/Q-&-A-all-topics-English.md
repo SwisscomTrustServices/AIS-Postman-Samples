@@ -142,6 +142,9 @@ How is it currently implemented in the AIS? A short description would help me a 
   Click to see the answer. 
   </summary>
  
+  * ETSI report link, see under PAdES-signature-1, then Full Report. Note: this link works if you are loggedin your ETSI checker account.
+https://signatures-conformance-checker.etsi.org/protected/PAdESConf/TestCases/pstoia_ea473cb707cf41e1/localdoc1signed20210421121619timestamp/index.html
+ 
 * The ETSI Signature Conformance Checker does the following (as per their homepage): https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsignatures-conformance-checker.etsi.org%2Fpub%2Findex.php&data=04%7C01%7CPaul.Muntean%40swisscom.com%7Cb8b18dbf28584312b2b308d91f7c15a0%7C364e5b87c1c7420d9beec35d19b557a1%7C1%7C0%7C637575440056859327%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=G2QJbPyJOeSZ9Or2M0uZpIF620boeAPf%2FcwLNj85P50%3D&reserved=0
 
  * The tool performs conformance tests on: XadES, CadES, ASiC, PAdES
@@ -149,9 +152,6 @@ How is it currently implemented in the AIS? A short description would help me a 
  * It checks the structure of the AdES signature versus the ETSI Specifications
 
  * When signing the document with a timestamp signature, the resulting document has just a timestamp signature, not an xAdES (Advanced Electronic) signature. Therefore, the checker correctly complains that a timestampped-only document does not conform to the expected signature:
-
- * ETSI report link:
-https://signatures-conformance-checker.etsi.org/protected/PAdESConf/TestCases/pstoia_ea473cb707cf41e1/localdoc1signed20210421121619timestamp/index.html
 
  * Error 5: 
  * Location-{CodeTest}:SubFilter-{CheckIfValueIsOneOfDefined}
