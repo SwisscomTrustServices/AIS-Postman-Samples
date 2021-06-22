@@ -153,13 +153,12 @@ https://signatures-conformance-checker.etsi.org/protected/PAdESConf/TestCases/ps
 
  * When signing the document with a timestamp signature, the resulting document has just a timestamp signature, not an xAdES (Advanced Electronic) signature. Therefore, the checker correctly complains that a timestampped-only document does not conform to the expected signature:
 
- * Error 5: 
+ **Error 5:** 
  * Location-{CodeTest}:SubFilter-{CheckIfValueIsOneOfDefined}
  * Found value: 'ETSI.RFC3161''. Allowed values: adbe.pkcs7.detached,adbe.pkcs7.sha1,ETSI.CAdES.detached
- 
  * This is because the timestamp signature is of type “ETSI.RFC3161”, which is not one of the ones listed above.
 
- * Error 21:
+ **Error 21:**
  * Location-{CodeTest}:Contents/CAdESSignature-{VerifyCMSOrCAdESWithinPAdES}
  * The CRYPTOGRAPHIC VERIFICATION of the SIGNATURE whose certificate has been issued by "CN=Swisscom TSS CA 4.1,OU=Digital Certificate Services,2.5.4.97=VATAT-U64741248,O=Swisscom IT Services Finance S.E.,C=AT" to "CN=Swisscom TSU 4.1,OU=Digital Certificate Services,O=Swisscom IT Services Finance S.E.,2.5.4.97=VATAT-U64741248,C=AT", and whose serial number is 70191010760937081556668692045972174202, HAS FAILED. Additional details follow: message-digest attribute value does not match calculated value
  
