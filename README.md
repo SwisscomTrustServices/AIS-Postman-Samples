@@ -55,3 +55,33 @@ Timestamp (batch files) flow: This request can be used to sign multiple form-dat
 Dynamic file: This request can be used to sign a PDF identified by the file path on the local machine and to write the signed document on the 
   provided output file path. It uses the flow specified by the `signatureMode` query param. The possible values are: `ON_DEMAND_WITH_STEP_UP`, 
   `ON_DEMAND` (with RA service), `STATIC` and `TIMESTAMP`. As a response, the status message of the operation will be returned.
+ 
+ ## Additional Postman Sample Videos
+ 
+* https://youtu.be/D2-933FV9y4
+
+How to place a Verify Call using Postman
+
+* https://youtu.be/MXzq_I7YE68
+
+Signing requests with and without templating using Postman
+
+* https://youtu.be/jWzvJLHwPhE
+
+The Postman tool for API endpoint testing explained
+
+* https://youtu.be/vC1_BZO291U
+
+How is the Distinguished Name composed and Postman example
+
+* https://youtu.be/rvUythZCKdQ
+
+What is a Distinguished Name and for is it usable
+
+* https://youtu.be/L4IQAop-1Ck
+
+What is a claimed identity and for what is it usable
+
+* https://youtu.be/bax96Cwnlhg
+
+How to generate a certificate for digital signing using OpenSSL
