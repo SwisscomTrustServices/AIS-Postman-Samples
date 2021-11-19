@@ -210,5 +210,18 @@ https://signatures-conformance-checker.etsi.org/protected/PAdESConf/TestCases/ps
 * f)	Access to the test account jurisdiction EU (eIDAS) with the following claimed ID: 
 * g)	ais-90days-trial-OTP:OnDemand-Advanced-EU
 * h)	we will configure “OTP-only“ for your productive FES Account
-  </details>
+ </details>
 
+ **14. I have a serial number missmatch, what can I do next?**
+ <details><summary>
+  Click to see the answer. 
+  </summary>
+  
+  * A serial number is related to each customer evidence which we store in our back-end.
+  
+  * Once the password was changed due to for example a password reset, or the MobileID app was reinstaleed then a serial number missmatch can appear. This means that the serial number is no longer associated to the evidence we store for that particular customer.
+  
+  * Remediation: the user has to re-identify himself.
+  
+  https://srsident.trustservices.swisscom.com/en/
+  </details>
