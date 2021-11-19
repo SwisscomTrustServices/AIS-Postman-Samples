@@ -219,7 +219,7 @@ https://signatures-conformance-checker.etsi.org/protected/PAdESConf/TestCases/ps
   
   * A serial number is related to each customer evidence which we store in our back-end.
   
-  * Once the password was changed due to for example a password reset, or the MobileID app was reinstaleed then a serial number mismatch can appear. This means that the serial number is no longer associated to the customer evidence which we store for that particular customer.
+  * Once the password was changed due to, for example, a password reset, or the MobileID app was reinstaled then a serial number mismatch can appear. This means that the serial number is no longer associated to the customer evidence which we store for that particular customer.
   
   * Remediation: the user has to re-identify himself.
   
