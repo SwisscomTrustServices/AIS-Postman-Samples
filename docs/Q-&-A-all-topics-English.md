@@ -212,14 +212,14 @@ https://signatures-conformance-checker.etsi.org/protected/PAdESConf/TestCases/ps
 * h)	we will configure “OTP-only“ for your productive FES Account
  </details>
 
- **14. I have a serial number missmatch, what can I do next?**
+ **14. I have a serial number mismatch, what can I do to remediate this?**
  <details><summary>
   Click to see the answer. 
   </summary>
   
   * A serial number is related to each customer evidence which we store in our back-end.
   
-  * Once the password was changed due to for example a password reset, or the MobileID app was reinstaleed then a serial number missmatch can appear. This means that the serial number is no longer associated to the evidence we store for that particular customer.
+  * Once the password was changed due to for example a password reset, or the MobileID app was reinstaleed then a serial number mismatch can appear. This means that the serial number is no longer associated to the customer evidence which we store for that particular customer.
   
   * Remediation: the user has to re-identify himself.
   
