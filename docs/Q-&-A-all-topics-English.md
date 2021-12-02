@@ -231,10 +231,13 @@ https://signatures-conformance-checker.etsi.org/protected/PAdESConf/TestCases/ps
   Click to see the answer. 
   </summary>
   
-  * In case MobileID was configured for that MSISDN (Tel. Nr.) from which the sign request was done then MobileID will be used as 2FA else the PWD/OTP link will be generated. This is an option only for Swiss SIMs as MobileID is available only in Switzerland.
+  * You need to activate your MobileID app, this works outside of Switzerland too.
+  https://www.mobileid.ch/en
   
-  * Else: you can use the following sign request in order to bypass the user/password entering screen.
+  * See also the FAQs under "Mobile ID SIM Card / eSIM"
+  https://www.mobileid.ch/en/faq
   
+  * after you register with MobileID, accept the TCs and do the SRS video identification you can sign and the user/password screen will be not shown anymore.
   
   </details>
  
