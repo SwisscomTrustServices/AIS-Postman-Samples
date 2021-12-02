@@ -231,13 +231,17 @@ https://signatures-conformance-checker.etsi.org/protected/PAdESConf/TestCases/ps
   Click to see the answer. 
   </summary>
   
+  * In general we recommend to use MobileID instead of PWD/OTP.
+  
+  * The password for loggin in case of PWD/OTP can be obtained after confirming the Email the user received with the TCs. The password can at this moment be also reseted.
+  
   * You need to activate your MobileID app, this works outside of Switzerland too.
   https://www.mobileid.ch/en
   
   * See also the FAQs under "Mobile ID SIM Card / eSIM"
   https://www.mobileid.ch/en/faq
   
-  * after you register with MobileID, accept the TCs and do the SRS video identification you can sign and the user/password screen will be not shown anymore.
+  * After you register with MobileID, accept the TCs (as mentioned above, the user sets his password at this step) and do the SRS video identification you can sign and the user/password screen will be not shown anymore.
   
   </details>
  
