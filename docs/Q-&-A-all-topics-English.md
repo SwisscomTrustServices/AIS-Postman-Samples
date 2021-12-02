@@ -225,3 +225,25 @@ https://signatures-conformance-checker.etsi.org/protected/PAdESConf/TestCases/ps
   
   https://srsident.trustservices.swisscom.com/en/
   </details>
+ 
+  **15. When signing I get the user/password iFrame screen, how can I bypass this in order to have a better flow and user experience?**
+ <details><summary>
+  Click to see the answer. 
+  </summary>
+  
+  * In case MobileID was configured for that MSISDN (Tel. Nr.) from which the sign request was done then MobileID will be used as 2FA else the PWD/OTP link will be generated. This is an option only for Swiss SIMs as MobileID is available only in Switzerland.
+  
+  * Else: you can use the following sign request in order to bypass the user/password entering screen.
+  
+  
+  </details>
+ 
+  **16. What is a certificate authority (CA), certificate policy (CP), public key infrastructure (PKI), etc.?**
+ <details><summary>
+  Click to see the answer. 
+  </summary>
+  
+  * A good resource to look this up is here available.
+  
+  https://pki.goog/faq/#faq-32
+  </details>
