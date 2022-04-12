@@ -23,38 +23,49 @@ or see it in OneDrive:
 ## RA Samples Description
 
 * https://ras.scapp.swisscom.com/api/evidences/verify
-RA Service Lookup: This request can be used to check if a user (phoneNumber) is already registered at the RA. Please note, that in the case of reinstalling the MobileID App without using the Backup Code this request response is still successful, but the user is not able to create a qualified signature without a re-identification.
+**Verify Request**: This request can be used to check if a user (phoneNumber) is already registered at the RA. Please note, that in the case of reinstalling the MobileID App without using the Backup Code this request response is still successful, but the user is not able to create a qualified signature without a re-identification.
 
 * https://ais.swisscom.com/AIS-Server/rs/v1.0/sign
-RA Service Sign Request (OnDemand): This API call can be used to request a MOBILE ID authentication in order to create a digital signature. 
+**Sign Request (static)**: This is the same API call as Sign Request (OnDemand). The difference is that this request will trigger a static signature, for multiple documents, with no 2FA process involved
 
 * https://ais.swisscom.com/AIS-Server/rs/v1.0/sign
-RA Service Sign Request (OnDemand) Batch: This is the same API call as RA Service Sign Request (OnDemand). The difference is that it is possible to request more than one signature. Please note that the request body format is not a valid JSON and needs to be prepared as a string. 
+**Sign Request (OnDemand)**: This API call can be used to request a MOBILE ID authentication in order to create a digital signature. The request is asynchronous and will trigger 2FA for the user's number. After the 2FA is confirmed, the Pending request must be used to complete the signing.
 
 * https://ais.swisscom.com/AIS-Server/rs/v1.0/pending
-Singing Service: Pending Request (OnDemand): This call is needed to collect the signature status. The status is pending until the user confirms the second factor using the MOBILE ID App. 
+**Singing Service: Pending Request (OnDemand)**: This call is needed to collect the signature status. The status is pending until the user confirms the second factor using the MOBILE ID App. 
 
-## iText7 Demo Samples Description
+* https://ais.swisscom.com/AIS-Server/rs/v1.0/sign
+**Sign Request (OnDemand & Templating)**:  This is the same API call as Sign Request (OnDemand), with the difference that a template is used for the DistinguishedName, providing only variables and allowing AIS to fill the data automatically based on the registered mobile number (msisdn) provided.
 
-To be able to run the following requests, you need to configure and run locally the 
-[iText7 AIS Demo app](https://github.com/SwisscomTrustServices/itext7-ais-demo).
+* https://ais.swisscom.com/AIS-Server/rs/v1.0/pending
+**Pending Request (OnDemand & Templating)**: This call is needed to collect the signature status of the template request shown previously. The status is pending until the user confirms the second factor using the MOBILE ID App. 
 
-* http://localhost:8080/ais/on-demand-step-up-file?inputFilePath={{input_file_path}}&outputFilePath={{output_file_path}}
-On Demand Advanced with Stepup (MID/PWD/OTP) flow: This request can be used to sign a PDF identified by the file path on the local machine and to 
-  write the signed document on the provided output file path. As a response, the status message of the operation will be returned.
+* https://ais.swisscom.com/AIS-Server/rs/v1.0/sign
+**Sign Request (OnDemand) Wrong Serial**: This call can be used to test that providing an invalid serial number will prompt AIS to respond with an appropriate error when the pending request is used and 2FA is confirmed.
+
+* https://ais.swisscom.com/AIS-Server/rs/v1.0/pending
+**Sign Request (OnDemand) Wrong Serial**: This call is needed to collect the signature status of the invalid serial request shown previously. AIS will respond with an error message instead of a signature, advising the user to identify in RA.
+
+* https://ais.swisscom.com/AIS-Server/rs/v1.0/sign
+**Timestamp**: This call can be used to sign a document using only a timestamp, with no 2FA involved.
+
+
+## Smart-Registration Service Demo Samples
+
+* https://ras-idp-dev.scapp.swisscom.com/oauth/token?client_id=missswaggerclient&client_secret=missswaggerclientsecret&grant_type=client_credentials&scope=miss
+SRS flow: This request can be used to retrieve an access_token to be used for the upcoming requests
   
-* http://localhost:8080/ais/static-multipart
-Static (multipart file) flow: This request can be used to sign a form-data PDF. As a response, the signed PDF encoded into ``base 64`` 
-  will be returned.
+* https://miss-backend-api-preprod.scapp.swisscom.com/api/providers?jurisdiction=EIDAS&loa=3&method=video
+SRS flow: This request can be used to retrieve a list of providers for a specific jurisdiction, level of assurance or identification method
   
-* http://localhost:8080/ais/timestamp-batch
-Timestamp (batch files) flow: This request can be used to sign multiple form-data PDFs in a batch. As a response, the signed PDF encoded into 
-  ``base 64`` will be returned.
+* https://miss-backend-api-preprod.scapp.swisscom.com/api/providers/test/video
+SRS Identification flow: This request can be used to test an identification endpoint (via video) for a specific user. The contents of the request will include information about the user undergoing the identification, such as phone number, first/last name, email and country. The server will respond with a refId that will be used in the next request, as well as details about the identification task.
   
-* http://localhost:8080/ais/dynamic?inputFilePath={{input_file_path}}&outputFilePath={{output_file_path}}&signatureMode={{signature_mode}}
-Dynamic file: This request can be used to sign a PDF identified by the file path on the local machine and to write the signed document on the 
-  provided output file path. It uses the flow specified by the `signatureMode` query param. The possible values are: `ON_DEMAND_WITH_STEP_UP`, 
-  `ON_DEMAND` (with RA service), `STATIC` and `TIMESTAMP`. As a response, the status message of the operation will be returned.
+* https://miss-backend-api-preprod.scapp.swisscom.com/api/identifications/{{refId}}
+SRS Identification flow: This request can be used to verify the status of the identification task started in the previous request, based on the reference ID (refId). The server responds with information about the task, including the issuer, the identification method, the mobile number and statuses.
+  
+  For more detailed information on the SRS flow, see section 4 in the Integration guide:
+https://documents.swisscom.com/product/filestore/lib/3b44e6a3-3799-4c55-bb6b-8f847c463d31/integration-guide-srs-en.pdf?idxme=pex-search
  
  ## Additional Postman Sample Videos
  
