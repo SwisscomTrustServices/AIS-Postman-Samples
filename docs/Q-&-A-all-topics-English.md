@@ -169,14 +169,14 @@ https://signatures-conformance-checker.etsi.org/protected/PAdESConf/TestCases/ps
  
 </details>
 
-**13. Can I skip the RA app, Video or similar and benefit from the Fast Track mode?**
+**13. Can I skip the RA app, video identification or similar and benefit from the Fast Track mode?**
 
 <details><summary>
   Click to see the answer. 
   </summary>
  
- * ETSI checker: https://signatures-conformance-checker.etsi.org/pub/index.php
- 
+ * Short answer, yes, see details below.
+ * Use to check the PDFs with the ETSI checker: https://signatures-conformance-checker.etsi.org/pub/index.php
  * Business/ Availability: Fast Track Mode (AES)
  * only for +41 numbers/ only for swiss mobile users
  * NO support for non-+41-users within EU

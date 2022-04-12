@@ -1,6 +1,10 @@
 {
 	"info": {
+<<<<<<< HEAD
 		"_postman_id": "77fc2bcf-fafc-4a01-b45b-d5f8d5d62d8d",
+=======
+		"_postman_id": "ff5e653d-4c27-4f31-9d69-d87c6669c6fe",
+>>>>>>> c9432b581f878cf96e2e90c9ed5e3844dc36badf
 		"name": "Swisscom All-in Signing Service",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -514,6 +518,7 @@
 				],
 				"body": {
 					"mode": "raw",
+<<<<<<< HEAD
 					"raw": "{\n\t\"SignRequest\": {\n\t\t\"@Profile\": \"http://ais.swisscom.ch/1.1\",\n\t\t\"@RequestID\": \"f6vg9i\",\n\t\t\"InputDocuments\": {\n\t\t\t\"DocumentHash\": {\n\t\t\t\t\"@ID\": \"8lbepe0\",\n\t\t\t\t\"dsig.DigestMethod\": {\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\n\t\t\t\t},\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\n\t\t\t},\n\t\t\t\"DocumentHash\": {\n\t\t\t\t\"@ID\": \"8lbepdfsdfe9\",\n\t\t\t\t\"dsig.DigestMethod\": {\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\n\t\t\t\t},\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\n\t\t\t}\n\t\t},\n\t\t\"OptionalInputs\": {\n\t\t\t\"AddTimestamp\": {\n\t\t\t\t\"@Type\": \"urn:ietf:rfc:3161\"\n\t\t\t},\n\t\t\t\"AdditionalProfile\": [\n\t\t\t\t\"http://ais.swisscom.ch/1.0/profiles/batchprocessing\",\n\t\t\t\t\"urn:oasis:names:tc:dss:1.0:profiles:timestamping\",\n\t\t\t\t\"http://ais.swisscom.ch/1.0/profiles/ondemandcertificate\",\n\t\t\t\t\"urn:oasis:names:tc:dss:1.0:profiles:asynchronousprocessing\",\n\t\t\t\t\"http://ais.swisscom.ch/1.1/profiles/redirect\"\n\t\t\t],\n\t\t\t\"ClaimedIdentity\": {\n\t\t\t\t\"Name\": \"{{claimedidentity}}:OnDemand-Advanced4\"\n\t\t\t},\n\t\t\t\"SignatureType\": \"urn:ietf:rfc:3369\",\n\t\t\t\"sc.AddRevocationInformation\": \"\",\n\t\t\t\"sc.SignatureStandard\": \"PADES\",\n\t\t\t\"sc.CertificateRequest\": {\n\t\t\t\t\"sc.DistinguishedName\": \"cn=TEST Max Maximus, givenname=Max, surname=Maximus, c=CH, serialnumber={{evidenceid}}\",\n\t\t\t\t\"sc.StepUpAuthorisation\": {\n\t\t\t\t\t\"sc.Phone\": {\n\t\t\t\t\t\t\"sc.Language\": \"fr\",\n\t\t\t\t\t\t\"sc.MSISDN\": \"{{msisdn}}\",\n\t\t\t\t\t\t\"sc.Message\": \"Please confirm the signing of the tax document\",\n                        \"sc.SerialNumber\": \"MIDCHE1MIERCD4J1\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n"
 				},
 				"url": {
@@ -598,6 +603,9 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\t\"SignRequest\": {\n\t\t\"@Profile\": \"http://ais.swisscom.ch/1.1\",\n\t\t\"@RequestID\": \"f6vg9i\",\n\t\t\"InputDocuments\": {\n\t\t\t\"DocumentHash\": {\n\t\t\t\t\"@ID\": \"8lbepe\",\n\t\t\t\t\"dsig.DigestMethod\": {\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\n\t\t\t\t},\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\n\t\t\t},\n\t\t\t\"DocumentHash\": {\n\t\t\t\t\"@ID\": \"8lbepdfsdfe\",\n\t\t\t\t\"dsig.DigestMethod\": {\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\n\t\t\t\t},\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\n\t\t\t}\n\t\t},\n\t\t\"OptionalInputs\": {\n\t\t\t\"AddTimestamp\": {\n\t\t\t\t\"@Type\": \"urn:ietf:rfc:3161\"\n\t\t\t},\n\t\t\t\"AdditionalProfile\": [\n\t\t\t\t\"http://ais.swisscom.ch/1.0/profiles/batchprocessing\",\n\t\t\t\t\"urn:oasis:names:tc:dss:1.0:profiles:timestamping\"\n\t\t\t],\n\t\t\t\"ClaimedIdentity\": {\n\t\t\t\t\"Name\": \"{{claimedidentity}}\"\n\t\t\t},\n\t\t\t\"SignatureType\": \"urn:ietf:rfc:3161\",\n\t\t\t\"sc.AddRevocationInformation\": \"BOTH\"\n\t\t}\n\t}\n}\n"
+=======
+					"raw": "{\n\t\"SignRequest\": {\n\t\t\"@Profile\": \"http://ais.swisscom.ch/1.1\",\n\t\t\"@RequestID\": \"f6vg9i\",\n\t\t\"InputDocuments\": {\n\t\t\t\"DocumentHash\": {\n\t\t\t\t\"@ID\": \"8lbepe0\",\n\t\t\t\t\"dsig.DigestMethod\": {\n\t\t\t\t\t\"@Algorithm\": \"http://www.w3.org/2001/04/xmlenc#sha512\"\n\t\t\t\t},\n\t\t\t\t\"dsig.DigestValue\": \"NA6wKClPbA+TYHW7GhPIiXn6gCGv9gSqOa508QzLGeJJYLjOfVD1tSD820M8btjEP49VhiAVK9xc/Y1z6hx+6g==\"\n\t\t\t}\n\t\t},\n\t\t\"OptionalInputs\": {\n\t\t\t\"AddTimestamp\": {\n\t\t\t\t\"@Type\": \"urn:ietf:rfc:3161\"\n\t\t\t},\n\t\t\t\"AdditionalProfile\": [\n\t\t\t\t\"http://ais.swisscom.ch/1.0/profiles/batchprocessing\",\n\t\t\t\t\"urn:oasis:names:tc:dss:1.0:profiles:timestamping\",\n\t\t\t\t\"http://ais.swisscom.ch/1.0/profiles/ondemandcertificate\",\n\t\t\t\t\"urn:oasis:names:tc:dss:1.0:profiles:asynchronousprocessing\",\n\t\t\t\t\"http://ais.swisscom.ch/1.1/profiles/redirect\"\n\t\t\t],\n\t\t\t\"ClaimedIdentity\": {\n\t\t\t\t\"Name\": \"{{claimedidentity}}:OnDemand-Advanced4\"\n\t\t\t},\n\t\t\t\"SignatureType\": \"urn:ietf:rfc:3369\",\n\t\t\t\"sc.AddRevocationInformation\": \"\",\n\t\t\t\"sc.SignatureStandard\": \"PADES\",\n\t\t\t\"sc.CertificateRequest\": {\n\t\t\t\t\"sc.DistinguishedName\": \"cn=Test ${given_name} ${family_name},givenname=${given_name}, surname=${family_name}, c=${country}, serialNumber=${evidence_id}\",\n\t\t\t\t\"sc.StepUpAuthorisation\": {\n\t\t\t\t\t\"sc.Phone\": {\n\t\t\t\t\t\t\"sc.Language\": \"fr\",\n\t\t\t\t\t\t\"sc.MSISDN\": \"{{msisdn}}\",\n\t\t\t\t\t\t\"sc.Message\": \"Please confirm the signing of the tax document\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n"
+>>>>>>> c9432b581f878cf96e2e90c9ed5e3844dc36badf
 				},
 				"url": {
 					"raw": "https://ais.swisscom.com/AIS-Server/rs/v1.0/sign",
