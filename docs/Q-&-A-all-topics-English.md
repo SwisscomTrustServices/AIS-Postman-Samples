@@ -255,7 +255,7 @@ https://signatures-conformance-checker.etsi.org/protected/PAdESConf/TestCases/ps
   https://pki.goog/faq/#faq-32
   </details>
  
-   **17. Why is the request is failing with an AuthenticationFailed message, stating that the SSL certificate check failed even though the certificate is already added to the customer?**
+   **17. Why is the request failing with an AuthenticationFailed message, stating that the SSL certificate check failed even though the certificate is already added to the customer?**
  <details><summary>
   Click to see the answer. 
   </summary>
