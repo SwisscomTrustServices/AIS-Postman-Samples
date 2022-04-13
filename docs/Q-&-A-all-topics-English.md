@@ -254,3 +254,11 @@ https://signatures-conformance-checker.etsi.org/protected/PAdESConf/TestCases/ps
   
   https://pki.goog/faq/#faq-32
   </details>
+ 
+   **17. Why is the request is failing with an AuthenticationFailed message, stating that the SSL certificate check failed even though the certificate is already added to the customer?**
+ <details><summary>
+  Click to see the answer. 
+  </summary>
+  
+  * In case of using an application to send the request, please make sure that the certificate is not included as a ssl-client-cert header, as the WAF automatically strips any certificate provided in this way.
+  </details>
