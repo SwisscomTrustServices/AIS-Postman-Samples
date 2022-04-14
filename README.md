@@ -13,16 +13,12 @@ AIS reference Guide
 
 ## Demo Video: Postman Setup
 
-[![Watcht the video](https://i.imgur.com/XyNjPib.png)](https://www.youtube.com/watch?v=mnR3vLCKoGU&list=PL-d189DRx5crNTWYyPhWvCAIWHvCcQVro&index=15)
-
-or see it in OneDrive:
-
-* https://onedrive.live.com/?authkey=%21AOOgsr9maiK5feg&cid=2D4A6425D2D29B86&id=2D4A6425D2D29B86%21668&parId=2D4A6425D2D29B86%21662&o=OneUp
-
+...
 
 ## Demo Video: Postman Requests Walkthrough
 
-...
+[![Watch the video](https://i.imgur.com/XyNjPib.png)](https://www.youtube.com/watch?v=mnR3vLCKoGU&list=PL-d189DRx5crNTWYyPhWvCAIWHvCcQVro&index=15)
+
 
 ## RA Samples Description
 
