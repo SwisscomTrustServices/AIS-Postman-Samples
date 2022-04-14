@@ -13,7 +13,7 @@ AIS reference Guide
 
 ## Demo Video: Postman Setup
 
-...
+[![Watcht the video](https://i.imgur.com/2qu2MpM.png)](https://youtu.be/D4vIw98qLCU)
 
 ## Demo Video: Postman Requests Walkthrough
 
