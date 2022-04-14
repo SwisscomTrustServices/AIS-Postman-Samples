@@ -11,7 +11,7 @@ AIS reference Guide
 
 * https://documents.swisscom.com/product/1000255-Digital_Signing_Service/Documents/Reference_Guide/Reference_Guide-All-in-Signing-Service-en.pdf
 
-## Demo Video: Postman Samples
+## Demo Video: Postman Setup
 
 [![Watcht the video](https://i.imgur.com/2qu2MpM.png)](https://youtu.be/D4vIw98qLCU)
 
@@ -19,6 +19,10 @@ or see it in OneDrive:
 
 * https://onedrive.live.com/?authkey=%21AOOgsr9maiK5feg&cid=2D4A6425D2D29B86&id=2D4A6425D2D29B86%21668&parId=2D4A6425D2D29B86%21662&o=OneUp
 
+
+## Demo Video: Postman Requests Walkthrough
+
+...
 
 ## RA Samples Description
 
