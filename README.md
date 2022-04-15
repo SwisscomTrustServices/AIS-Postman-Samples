@@ -69,30 +69,31 @@ https://documents.swisscom.com/product/filestore/lib/3b44e6a3-3799-4c55-bb6b-8f8
  
  ## Additional Postman Sample Videos
  
+ How to place a Verify Call using Postman
+ 
 * https://youtu.be/D2-933FV9y4
-
-How to place a Verify Call using Postman
-
-* https://youtu.be/MXzq_I7YE68
 
 Signing requests with and without templating using Postman
 
-* https://youtu.be/jWzvJLHwPhE
+* https://youtu.be/MXzq_I7YE68
 
 The Postman tool for API endpoint testing explained
 
-* https://youtu.be/vC1_BZO291U
+* https://youtu.be/jWzvJLHwPhE
 
 How is the Distinguished Name composed and Postman example
 
-* https://youtu.be/rvUythZCKdQ
+* https://youtu.be/vC1_BZO291U
 
 What is a Distinguished Name and for is it usable
-
-* https://youtu.be/L4IQAop-1Ck
+* https://youtu.be/rvUythZCKdQ
 
 What is a claimed identity and for what is it usable
 
-* https://youtu.be/bax96Cwnlhg
+* https://youtu.be/L4IQAop-1Ck
 
 How to generate a certificate for digital signing using OpenSSL
+
+* https://youtu.be/bax96Cwnlhg
+
+
