@@ -19,6 +19,10 @@ AIS reference Guide
 
 [![Watch the video](https://i.imgur.com/XyNjPib.png)](https://www.youtube.com/watch?v=mnR3vLCKoGU&list=PL-d189DRx5crNTWYyPhWvCAIWHvCcQVro&index=15)
 
+## Certificate used for AIS trial account
+
+In order to use any of the trial signing requests, you will need to generate a certificate containing identifying information so that the trial customer will accept the requests. Please contact Servicedesk.ICT@swisscom.com for more information.
+
 
 ## RA Samples Description
 
