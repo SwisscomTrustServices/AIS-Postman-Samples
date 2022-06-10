@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "77fc2bcf-fafc-4a01-b45b-d5f8d5d62d8d",
+		"_postman_id": "0aa2f9de-e979-4024-a400-805001afd38b",
 		"name": "Swisscom All-in Signing Service",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 	},
 	"item": [
 		{
@@ -224,6 +224,43 @@
 								"api",
 								"identifications",
 								"{{refId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RAS",
+			"item": [
+				{
+					"name": "Lookup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"msisdn\" : \"+41798671894\"\n}\n\n//RESPONSE SAMPLE\n// {\n//     \"assuranceLevel\": 4,\n//     \"assuranceLevelEidas\": 4,\n//     \"jurisdictions\": [\n//         \"EIDAS\",\n//         \"ZERTES\"\n//     ],\n//     \"msisdn\": \"41798671894\",\n//     \"serialNumber\": \"SAS011m0y2to7np\"\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ras.scapp.swisscom.com/api/evidences/lookup",
+							"protocol": "https",
+							"host": [
+								"ras",
+								"scapp",
+								"swisscom",
+								"com"
+							],
+							"path": [
+								"api",
+								"evidences",
+								"lookup"
 							]
 						}
 					},
