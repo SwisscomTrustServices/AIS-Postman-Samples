@@ -262,3 +262,19 @@ https://signatures-conformance-checker.etsi.org/protected/PAdESConf/TestCases/ps
   
   * In case of using an application to send the request, please make sure that the certificate is not included as a ssl-client-cert header, as the WAF automatically strips any certificate provided in this way.
   </details>
+ 
+  **18. After completing video verification why can't I still get evidenceId?**
+ <details><summary>
+  Click to see the answer. 
+  </summary>
+  
+ * Wait an hour and you should receive SMS with a link, please follow the link to complete process. After this you are fully verified.
+ </details>
+ 
+  **19. How to import a Postman Sample collection?**
+<details><summary>
+  Click to see the answer. 
+  </summary>
+ 
+ * Fork our Postman sample repository, download Postman https://www.postman.com/, then click Import and choose "Code repository", next choose Github and lastly select the forked repository.
+ </details>
