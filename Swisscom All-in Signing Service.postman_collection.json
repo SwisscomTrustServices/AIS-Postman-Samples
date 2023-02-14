@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "88e38982-ea18-4fed-b153-0dfa56145c0b",
+		"_postman_id": "6ed30d17-e9ef-412c-861a-f0f0ae4c2146",
 		"name": "Swisscom All-in Signing Service",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "6521116"
@@ -319,11 +319,11 @@
 							]
 						},
 						"url": {
-							"raw": "https://rax-preprod-green.mtls-scapp.swisscom.com/auth/realms/broker/protocol/openid-connect/token",
+							"raw": "https://rax-prod-green.scapp.swisscom.com/auth/realms/broker/protocol/openid-connect/token",
 							"protocol": "https",
 							"host": [
-								"rax-preprod-green",
-								"mtls-scapp",
+								"rax-prod-green",
+								"scapp",
 								"swisscom",
 								"com"
 							],
@@ -334,64 +334,6 @@
 								"protocol",
 								"openid-connect",
 								"token"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Introspection",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "grant_type",
-									"value": "authorization_code",
-									"type": "text"
-								},
-								{
-									"key": "client_id",
-									"value": "{{clientId}}",
-									"type": "text"
-								},
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "https://rax-preprod-green.mtls-scapp.swisscom.com/auth/realms/broker/protocol/openid-connect/token/introspect",
-							"protocol": "https",
-							"host": [
-								"rax-preprod-green",
-								"mtls-scapp",
-								"swisscom",
-								"com"
-							],
-							"path": [
-								"auth",
-								"realms",
-								"broker",
-								"protocol",
-								"openid-connect",
-								"token",
-								"introspect"
 							]
 						}
 					},
@@ -417,13 +359,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://ais.pre.swissdigicert.ch/AIS-Server/etsi/standard/rdsc/v1/signatures/signDoc",
+							"raw": "https://ais.swisscom.com/AIS-Server/etsi/standard/rdsc/v1/signatures/signDoc",
 							"protocol": "https",
 							"host": [
 								"ais",
-								"pre",
-								"swissdigicert",
-								"ch"
+								"swisscom",
+								"com"
 							],
 							"path": [
 								"AIS-Server",
