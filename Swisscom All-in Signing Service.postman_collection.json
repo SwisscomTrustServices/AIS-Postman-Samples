@@ -277,7 +277,7 @@
 			"name": "RAX",
 			"item": [
 				{
-					"name": "TokenRequest",
+					"name": "JwtToken",
 					"event": [
 						{
 							"listen": "test",
