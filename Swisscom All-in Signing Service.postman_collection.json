@@ -277,7 +277,7 @@
 			"name": "RAX",
 			"item": [
 				{
-					"name": "JwtToken",
+					"name": "Token",
 					"event": [
 						{
 							"listen": "test",
@@ -303,31 +303,32 @@
 								},
 								{
 									"key": "code",
-									"value": "{{code}}",
+									"value": "",
 									"type": "text"
 								},
 								{
 									"key": "client_id",
-									"value": "{{clientId}}",
+									"value": "",
 									"type": "text"
 								},
 								{
 									"key": "client_secret",
-									"value": "{{clientSecret}}",
+									"value": "",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "https://rax-prod-green.scapp.swisscom.com/auth/realms/broker/protocol/openid-connect/token",
+							"raw": "https://auth.trustservices.swisscom.com/api/auth/realms/broker/protocol/openid-connect/token",
 							"protocol": "https",
 							"host": [
-								"rax-prod-green",
-								"scapp",
+								"auth",
+								"trustservices",
 								"swisscom",
 								"com"
 							],
 							"path": [
+								"api",
 								"auth",
 								"realms",
 								"broker",
@@ -340,7 +341,7 @@
 					"response": []
 				},
 				{
-					"name": "Signing",
+					"name": "Signing (OnDemand)",
 					"protocolProfileBehavior": {
 						"strictSSL": false,
 						"tlsDisabledProtocols": [],
@@ -351,7 +352,47 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"SAD\": \"{{accessToken}}\",\r\n    \"requestID\": \"8b6ed6f9-5bf8-42b2-bc8d-b242a35c94c8\",\r\n    \"credentialID\": \"OnDemand-Advanced4\",\r\n    \"profile\": \"http://uri.etsi.org/19432/v1.1.1#/creationprofile#\",\r\n    \"signatureFormat\": \"P\",\r\n    \"documentDigests\": {\r\n        \"hashAlgorithmOID\": \"2.16.840.1.101.3.4.2.1\",\r\n        \"hashes\": [\r\n            \"sTOgwOm+474gFj0q0x1iSNspKqbcse4IeiqlDg/HWuI=\"\r\n        ]\r\n    }\r\n}",
+							"raw": "{\r\n    \"SAD\": \"{{accessToken}}\",\r\n    \"requestID\": \"8b6ed6f9-5bf8-42b2-bc8d-b242a35c94c8\",\r\n    \"credentialID\": \"OnDemand-Advanced4\",\r\n    \"profile\": \"http://uri.etsi.org/19432/v1.1.1#/creationprofile#\",\r\n    \"signatureFormat\": \"P\",\r\n    \"conformanceLevel\": \"AdES-B-LTA\",\r\n    \"documentDigests\": {\r\n        \"hashAlgorithmOID\": \"2.16.840.1.101.3.4.2.1\",\r\n        \"hashes\": [\r\n            \"sTOgwOm+474gFj0q0x1iSNspKqbcse4IeiqlDg/HWuI=\"\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ais.swisscom.com/AIS-Server/etsi/standard/rdsc/v1/signatures/signDoc",
+							"protocol": "https",
+							"host": [
+								"ais",
+								"swisscom",
+								"com"
+							],
+							"path": [
+								"AIS-Server",
+								"etsi",
+								"standard",
+								"rdsc",
+								"v1",
+								"signatures",
+								"signDoc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signing (static)",
+					"protocolProfileBehavior": {
+						"strictSSL": false,
+						"tlsDisabledProtocols": [],
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"SAD\": \"{{accessToken}}\",\r\n    \"requestID\": \"8b6ed6f9-5bf8-42b2-bc8d-b242a35c94c8\",\r\n    \"credentialID\": \"static-saphir4-ch\",\r\n    \"profile\": \"http://uri.etsi.org/19432/v1.1.1#/creationprofile#\",\r\n    \"signatureFormat\": \"P\",\r\n    \"documentDigests\": {\r\n        \"hashAlgorithmOID\": \"2.16.840.1.101.3.4.2.1\",\r\n        \"hashes\": [\r\n            \"sTOgwOm+474gFj0q0x1iSNspKqbcse4IeiqlDg/HWuI=\"\r\n        ]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

@@ -23,7 +23,6 @@ AIS reference Guide
 
 In order to use any of the trial signing requests, you will need to generate a certificate containing identifying information so that the trial customer will accept the requests. Please contact Servicedesk.ICT@swisscom.com for more information.
 
-
 ## RA Samples Description
 
 * https://ras.scapp.swisscom.com/api/evidences/verify
@@ -70,7 +69,22 @@ SRS Identification flow: This request can be used to verify the status of the id
   
   For more detailed information on the SRS flow, see section 4 in the Integration guide:
 https://documents.swisscom.com/product/filestore/lib/3b44e6a3-3799-4c55-bb6b-8f847c463d31/integration-guide-srs-en.pdf?idxme=pex-search
+
+## RAX Samples Description
+
+* https://auth.trustservices.swisscom.com/
+**RAX Authentication Flow**: In order to generate an auth_code for the /token endpoint, you will need to identify via RAX using an appropriate IdP depending on your evidence (MID, PF or PWDOTP). After successful authentication you will receive the code in the URL.
+
+* https://auth.trustservices.swisscom.com/api/auth/realms/broker/protocol/openid-connect/token 
+**RAX Token Generation**: This request is used to generate a JWT token for document signing for the upcoming requests by using the code from the previous step and client credentials provided by support after successful trial account onboarding.
+
+* https://ais.swisscom.com/AIS-Server/etsi/standard/rdsc/v1/signatures/signDoc
+**ETSI Signing (OnDemand)**: This call will sign a document hash using ETSI (OnDemand) and the JWT token generated in the previous step, prompting AIS to respond with the signatureObject after a successful signing.
+
+* https://ais.swisscom.com/AIS-Server/etsi/standard/rdsc/v1/signatures/signDoc
+**ETSI Signing (static)**: This call will sign a document hash using ETSI (static seal) and the JWT token generated in the previous step, prompting AIS to respond with the signatureObject after a successful signing.
  
+
  ## Additional Postman Sample Videos
  
  How to place a Verify Call using Postman
