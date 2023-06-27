@@ -84,8 +84,13 @@ https://documents.swisscom.com/product/filestore/lib/3b44e6a3-3799-4c55-bb6b-8f8
 * https://ais.swisscom.com/AIS-Server/etsi/standard/rdsc/v1/signatures/signDoc
 **ETSI Signing (static)**: This call will sign a document hash using ETSI (static seal) and the JWT token generated in the previous step, prompting AIS to respond with the signatureObject after a successful signing.
  
-
- ## Additional Postman Sample Videos
+ ## ETSI Postman Sample Videos
+ 
+ todo
+ 
+* todo
+  
+ ## DSS Postman Sample Videos
  
  How to place a Verify Call using Postman
  
