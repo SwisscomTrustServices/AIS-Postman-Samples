@@ -100,7 +100,9 @@ https://documents.swisscom.com/product/filestore/lib/3b44e6a3-3799-4c55-bb6b-8f8
 
 ## ETSI Samples Description
 
-In order to use these Postman samples the user has to first generate a certificate signing request (CSR) and send it to our support team together application form.Next, the user has to configure the certificate which you receive from the e support team and configure it in Postman or any other used client.
+In order to use these Postman samples the user has to first generate a certificate signing request (CSR) and send it to our support team together with the application form.
+https://documents.swisscom.com/product/filestore/lib/7668dda8-bd14-4c9c-baaf-fed379adbb72/ordertestaccountauthbroker-en.pdf?idxme=pex-search 
+Next, the user has to configure the certificate which he receives from the support team in Postman or any other used client.
 
 * https://auth.trustservices.swisscom.com/
 **Broker Authentication Flow**: In order to generate an auth_code for the /token endpoint, you will need to identify via broker using an appropriate IdP depending on your evidence (MID, PF or PWDOTP). After successful authentication you will receive the code in the URL.
