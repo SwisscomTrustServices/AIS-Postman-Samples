@@ -108,6 +108,8 @@ Next, the user has to configure the certificate which he receives from the suppo
 More details on how to integrate the ETSI interface can be found here.  
 * https://trustservices.swisscom.com/hubfs/Website%20Files/Documents/Developer%20Documentation/Reference_Guide_SmartRegistration_Signing-en.pdf?hsLang=de
 
+Supported Postman samples:
+
 * https://auth.trustservices.swisscom.com/
 **Broker Authentication Flow**: In order to generate an auth_code for the /token endpoint, you will need to identify via broker using an appropriate IdP depending on your evidence (MID, PF or PWDOTP). After successful authentication you will receive the code in the URL.
 
