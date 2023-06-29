@@ -98,7 +98,7 @@ SRS Identification flow: This request can be used to verify the status of the id
   For more detailed information on the SRS flow, see section 4 in the Integration guide:
 https://documents.swisscom.com/product/filestore/lib/3b44e6a3-3799-4c55-bb6b-8f847c463d31/integration-guide-srs-en.pdf?idxme=pex-search
 
-## ETSI Samples Description
+## ETSI Postman Samples Description
 
 In order to use these Postman samples the user has to first generate a certificate signing request (CSR) and send it to our support team together with the application form. The following formular can be used:
 * https://documents.swisscom.com/product/filestore/lib/7668dda8-bd14-4c9c-baaf-fed379adbb72/ordertestaccountauthbroker-en.pdf?idxme=pex-search
