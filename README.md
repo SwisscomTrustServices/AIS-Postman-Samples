@@ -132,5 +132,5 @@ More details on how to integrate the ETSI interface can be found here.
  
  Signing based on the ETSI interface and ZertES.
  
-* todo
+* https://youtu.be/Pbl1kJmAnNI
   
