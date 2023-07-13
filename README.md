@@ -108,8 +108,6 @@ Next, the user has to configure the certificate which he receives from the suppo
 More details on how to integrate the ETSI interface can be found here.  
 * https://trustservices.swisscom.com/hubfs/Website%20Files/Documents/Developer%20Documentation/Reference_Guide_SmartRegistration_Signing-en.pdf?hsLang=de
 
-**Available Postman samples:**
-
 **Standard Signing Flow**:
 
 * Endpoint https://auth.trustservices.swisscom.com/
@@ -132,11 +130,11 @@ More details on how to integrate the ETSI interface can be found here.
 
 **PAR Based Signing Flow**:
 
-Postman samples available by mid Aug. with the next RAX PROD release. Currently only in PRE-PROD available.
+Postman samples are available by mid Aug. with the next RAX PROD release. Currently the samples are only in PRE-PROD available.
 
 **CIBA Based Signing Flow**:
 
-Customer Futurae Account is Required.
+Customer Futurae Account is Required to run the samples.
  
  ## ETSI Postman Sample Videos
  
