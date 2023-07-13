@@ -110,6 +110,8 @@ More details on how to integrate the ETSI interface can be found here.
 
 **Available Postman samples:**
 
+**Standard Signing Flow**:
+
 * https://auth.trustservices.swisscom.com/
 **Broker Authentication Flow**: In order to generate an auth_code for the /token endpoint, you will need to identify via broker using an appropriate IdP depending on your evidence (MID, PF or PWDOTP). After successful authentication you will receive the code in the URL.
 
@@ -127,10 +129,22 @@ More details on how to integrate the ETSI interface can be found here.
 
 * https://ais.swisscom.com/AIS-Server/etsi/standard/rdsc/v1/signatures/signDoc
 **ETSI Signing (static) ZertES**: This call will sign a document hash using ETSI (static seal), ZertES and the JWT token generated in the previous step, prompting AIS to respond with the signatureObject after a successful signing.
+
+**PAR Based Signing Flow**:
+tba
+
+**CIBA Based Signing Flow**:
+tba
  
  ## ETSI Postman Sample Videos
  
  Signing based on the ETSI interface and ZertES.
- 
+ **Standard Signing Flow**:
 * https://youtu.be/Pbl1kJmAnNI
+
+**PAR Based Signing Flow**:
+* tba
+
+**CIBA Based Signing Flow**:
+* tba
   
