@@ -139,14 +139,15 @@ Customer Futurae Account is Required to run the samples.
  ## ETSI Postman Sample Videos
  
  Signing based on the ETSI interface and ZertES.
- **Standard Signing Flow**:
+ 
+ **Standard Authenticaiton and Signing Flow**:
 * https://youtu.be/Pbl1kJmAnNI
 
-**PAR Based Signing Flow**:
+**PAR Based Authenticaiton and Signing Flow**:
 
 * tba
 
-**CIBA Based Signing Flow**:
+**CIBA Based Authenticaiton and Signing Flow**:
 
 * tba
   
