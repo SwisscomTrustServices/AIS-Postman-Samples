@@ -130,11 +130,11 @@ More details on how to integrate the ETSI interface can be found here.
 
 **PAR Based Signing Flow**:
 
-Postman samples are available by mid Aug. with the next RAX PROD release. Currently the samples are only in PRE-PROD available.
+* Postman samples are available by mid Aug. with the next RAX PROD release. Currently the samples are only in PRE-PROD available.
 
 **CIBA Based Signing Flow**:
 
-Customer Futurae Account is Required to run the samples.
+* Customer Futurae Account is Required to run the samples.
  
  ## ETSI Postman Sample Videos
  
