@@ -131,9 +131,11 @@ More details on how to integrate the ETSI interface can be found here.
 **ETSI Signing (static) ZertES**: This call will sign a document hash using ETSI (static seal), ZertES and the JWT token generated in the previous step, prompting AIS to respond with the signatureObject after a successful signing.
 
 **PAR Based Signing Flow**:
+
 tba
 
 **CIBA Based Signing Flow**:
+
 tba
  
  ## ETSI Postman Sample Videos
@@ -143,8 +145,10 @@ tba
 * https://youtu.be/Pbl1kJmAnNI
 
 **PAR Based Signing Flow**:
+
 * tba
 
 **CIBA Based Signing Flow**:
+
 * tba
   
