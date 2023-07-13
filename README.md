@@ -141,11 +141,12 @@ Customer Futurae Account is Required to run the samples.
  Signing based on the ETSI interface and ZertES.
  
  **Standard Authenticaiton and Signing Flow**:
+ 
 * https://youtu.be/Pbl1kJmAnNI
 
 **PAR Based Authenticaiton and Signing Flow**:
 
-* tba
+* https://youtu.be/SIlqeYLFS5A
 
 **CIBA Based Authenticaiton and Signing Flow**:
 
