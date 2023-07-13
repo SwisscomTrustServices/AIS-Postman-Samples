@@ -132,11 +132,11 @@ More details on how to integrate the ETSI interface can be found here.
 
 **PAR Based Signing Flow**:
 
-tba
+Postman samples available by mid Aug. with the next RAX release.
 
 **CIBA Based Signing Flow**:
 
-tba
+Futurae Account is Required.
  
  ## ETSI Postman Sample Videos
  
