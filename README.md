@@ -142,13 +142,13 @@ Customer Futurae Account is Required to run the samples.
  
  **Standard Authenticaiton and Signing Flow**:
  
-* https://youtu.be/Pbl1kJmAnNI
+ * https://youtu.be/Pbl1kJmAnNI
 
-**PAR Based Authenticaiton and Signing Flow**:
+ **PAR Based Authentication and Signing Flow**:
 
-* https://youtu.be/SIlqeYLFS5A
+ * https://youtu.be/SIlqeYLFS5A
 
-**CIBA Based Authenticaiton and Signing Flow**:
-
-* tba
+ **CIBA Based Authenticaiton and Signing Flow**:
+ 
+ * tba
   
