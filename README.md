@@ -112,31 +112,31 @@ More details on how to integrate the ETSI interface can be found here.
 
 **Standard Signing Flow**:
 
-* https://auth.trustservices.swisscom.com/
+* Endpoint https://auth.trustservices.swisscom.com/
 **Broker Authentication Flow**: In order to generate an auth_code for the /token endpoint, you will need to identify via broker using an appropriate IdP depending on your evidence (MID, PF or PWDOTP). After successful authentication you will receive the code in the URL.
 
-* https://auth.trustservices.swisscom.com/api/auth/realms/broker/protocol/openid-connect/token 
+* Endpoint https://auth.trustservices.swisscom.com/api/auth/realms/broker/protocol/openid-connect/token 
 **Broker Token Generation**: This request is used to generate a JWT token for document signing for the upcoming requests by using the code from the previous step and client credentials provided by support after successful trial account onboarding.
 
-* https://ais.swisscom.com/AIS-Server/etsi/standard/rdsc/v1/signatures/signDoc
+* Endpoint https://ais.swisscom.com/AIS-Server/etsi/standard/rdsc/v1/signatures/signDoc
 **ETSI Signing (OnDemand) eIDAS**: This call will sign a document hash using ETSI (OnDemand), eIDAS, and the JWT token generated in the previous step, prompting AIS to respond with the signatureObject after a successful signing.
 
-* https://ais.swisscom.com/AIS-Server/etsi/standard/rdsc/v1/signatures/signDoc
+* Endpoint https://ais.swisscom.com/AIS-Server/etsi/standard/rdsc/v1/signatures/signDoc
 **ETSI Signing (OnDemand) ZertES**: This call will sign a document hash using ETSI (OnDemand), ZertES, and the JWT token generated in the previous step, prompting AIS to respond with the signatureObject after a successful signing.
 
-* https://ais.swisscom.com/AIS-Server/etsi/standard/rdsc/v1/signatures/signDoc
+* Endpoint https://ais.swisscom.com/AIS-Server/etsi/standard/rdsc/v1/signatures/signDoc
 **ETSI Signing (static) eIDAS**: This call will sign a document hash using ETSI (static seal), eIDAS, and the JWT token generated in the previous step, prompting AIS to respond with the signatureObject after a successful signing.
 
-* https://ais.swisscom.com/AIS-Server/etsi/standard/rdsc/v1/signatures/signDoc
+* Endpoint https://ais.swisscom.com/AIS-Server/etsi/standard/rdsc/v1/signatures/signDoc
 **ETSI Signing (static) ZertES**: This call will sign a document hash using ETSI (static seal), ZertES and the JWT token generated in the previous step, prompting AIS to respond with the signatureObject after a successful signing.
 
 **PAR Based Signing Flow**:
 
-Postman samples available by mid Aug. with the next RAX release.
+Postman samples available by mid Aug. with the next RAX PROD release. Currently only in PRE-PROD available.
 
 **CIBA Based Signing Flow**:
 
-Futurae Account is Required.
+Customer Futurae Account is Required.
  
  ## ETSI Postman Sample Videos
  
