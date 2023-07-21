@@ -126,9 +126,17 @@ More details on how to integrate the ETSI interface can be found here.
 
 * Postman samples are available by mid Aug. 2023 with the next RAX PROD release. Currently the samples are only in PRE-PROD available.
 
+* **ParRequest**: Generates a request_uri based on the customer's login_hint/claims that will be used to form the authentication URL containing the QR code. Used Endpoint /api/auth/realms/broker/protocol/openid-connect/ext/par/request
+
+* **Auth**: Generates an authentication URL containing the request_uri, redirect_uri, scope, state and nonce that can be opened via the browser to access the QR code for scanning with the MySwisscomApp/Futurae app.
+
 **CIBA Based Signing Flow**:
 
-* Customer Futurae Account is Required to run the samples.
+* Customer Futurae or MySwisscomApp account is needed.
+
+* **QRCodeAuthorize**: Generates a QR code containing the login_hint/claims used for authenticating a sign request. QR code must be scanned by the MySwisscomApp or Futurae app and authorized by the user. Used Endpoint /api/auth/realms/broker/protocol/openid-connect/oauth-authorize 
+
+* **CIBATokenGeneration**: Generates an SAD token for the ETSI signing endpoint based on the QR code authentication used in the previous call. Used Endpoint /api/auth/realms/broker/protocol/openid-connect/oauth-token
  
  ## ETSI Postman Sample Videos
  

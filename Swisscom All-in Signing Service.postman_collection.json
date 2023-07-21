@@ -277,6 +277,242 @@
 			"name": "ETSI",
 			"item": [
 				{
+					"name": "PAR (MobileID)",
+					"item": [
+						{
+							"name": "ParRequest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"client_id\": \"{{client_id}}\",\r\n    \"client_secret\": \"{{client_secret}}\",\r\n    \"login_hint\": {\r\n        \"identifier\": \"41798106894\",\r\n        \"namespace\": \"msisdn\"\r\n    },\r\n    \"client_session_id\": \"test_session_id\",\r\n    \"redirect_uri\": \"https://rax-dev-cat.dev-scapp.swisscom.com\",\r\n    \"claims\": {\r\n        \"credentialID\": \"OnDemand-Advanced4\",\r\n        \"documentDigests\": [\r\n            {\r\n                \"hash\": \"sTOgwOm+474gFj0q0x1iSNspKqbcse4IeiqlDg/HWuI=\",\r\n                \"label\": \"Leasing agreement Contract 1\"\r\n            }\r\n        ],\r\n        \"hashAlgorithmOID\": \"2.16.840.1.101.3.4.2.1\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://rax-dev-cat.mtls-dev-scapp.swisscom.com/api/auth/realms/broker/protocol/openid-connect/ext/par/request",
+									"protocol": "https",
+									"host": [
+										"rax-dev-cat",
+										"mtls-dev-scapp",
+										"swisscom",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"realms",
+										"broker",
+										"protocol",
+										"openid-connect",
+										"ext",
+										"par",
+										"request"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Auth",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rax-dev-cat.mtls-dev-scapp.swisscom.com/api/auth/realms/broker/protocol/openid-connect/ext/par/request?client_id&redirect_uri&request_uri&scope&state=622c7ddb-cde8-4005-bed1-111111111111&nonce",
+									"protocol": "https",
+									"host": [
+										"rax-dev-cat",
+										"mtls-dev-scapp",
+										"swisscom",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"realms",
+										"broker",
+										"protocol",
+										"openid-connect",
+										"ext",
+										"par",
+										"request"
+									],
+									"query": [
+										{
+											"key": "client_id",
+											"value": null
+										},
+										{
+											"key": "redirect_uri",
+											"value": null
+										},
+										{
+											"key": "request_uri",
+											"value": null
+										},
+										{
+											"key": "scope",
+											"value": null
+										},
+										{
+											"key": "state",
+											"value": "622c7ddb-cde8-4005-bed1-111111111111"
+										},
+										{
+											"key": "nonce",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CIBA (MySwisscomApp)",
+					"item": [
+						{
+							"name": "QRCodeAuthorize",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonDataReq = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable(\"auth_req_id\", jsonDataReq.auth_req_id)"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "client_id",
+											"value": "{{client_id_ciba}}",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "{{client_secret_ciba}}",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "sign",
+											"type": "text"
+										},
+										{
+											"key": "login_hint_token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGlmaWVyIjoiZGMyYmMxNzgtNGFmNi00NGI1LTgwOTMtZGNlOWZiZmJiNWE4IiwibmFtZXNwYWNlIjoiTVNBIn0.mm7NiLY6ez7hsV1fZgUDwvdC78ei5No0cPf5Kh2Y9qE",
+											"type": "text"
+										},
+										{
+											"key": "claims_token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVkZW50aWFsSUQiOiJPbkRlbWFuZC1BZHZhbmNlZDQiLCJkb2N1bWVudERpZ2VzdHMiOlt7Imhhc2giOiJzVE9nd09tKzQ3NGdGajBxMHgxaVNOc3BLcWJjc2U0SWVpcWxEZy9IV3VJPSIsImxhYmVsIjoiTGVhc2luZyBhZ3JlZW1lbnQgQ29udHJhY3QifV0sImhhc2hBbGdvcml0aG1PSUQiOiIyLjE2Ljg0MC4xLjEwMS4zLjQuMi4xIn0.j3LXU8Q88GAyXZZYSos_b2LsAV_yttRT4WdeunsVOLo",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://rax-dev-cat.mtls-dev-scapp.swisscom.com/api/auth/realms/broker/protocol/openid-connect/oauth-authorize",
+									"protocol": "https",
+									"host": [
+										"rax-dev-cat",
+										"mtls-dev-scapp",
+										"swisscom",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"realms",
+										"broker",
+										"protocol",
+										"openid-connect",
+										"oauth-authorize"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CIBATokenGeneration",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonDataReq = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable(\"accessToken\", jsonDataReq.access_token)"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "client_id",
+											"value": "{{client_id_ciba}}",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "{{client_secret_ciba}}",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "urn:openid:params:grant-type:ciba",
+											"type": "text"
+										},
+										{
+											"key": "auth_req_id",
+											"value": "{{auth_req_id}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://rax-dev-cat.mtls-dev-scapp.swisscom.com/api/auth/realms/broker/protocol/openid-connect/oauth-token",
+									"protocol": "https",
+									"host": [
+										"rax-dev-cat",
+										"mtls-dev-scapp",
+										"swisscom",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"realms",
+										"broker",
+										"protocol",
+										"openid-connect",
+										"oauth-token"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "BrokerTokenGeneration",
 					"event": [
 						{
