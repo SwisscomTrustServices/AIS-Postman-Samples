@@ -152,5 +152,5 @@ More details on how to integrate the ETSI interface can be found here.
 
  **CIBA Based Authenticaiton and Signing Flow**:
  
- * tba
+ * https://youtu.be/PrIlJ4BwzYc
   
