@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6ed30d17-e9ef-412c-861a-f0f0ae4c2146",
+		"_postman_id": "beb22665-945a-42fc-b3a4-a9552ea2acf7",
 		"name": "Swisscom All-in Signing Service",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "6521116"
@@ -387,7 +387,8 @@
 											"var jsonDataReq = JSON.parse(responseBody);\r",
 											"postman.setEnvironmentVariable(\"auth_req_id\", jsonDataReq.auth_req_id)"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -414,7 +415,7 @@
 										},
 										{
 											"key": "login_hint_token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGlmaWVyIjoiZGMyYmMxNzgtNGFmNi00NGI1LTgwOTMtZGNlOWZiZmJiNWE4IiwibmFtZXNwYWNlIjoiTVNBIn0.mm7NiLY6ez7hsV1fZgUDwvdC78ei5No0cPf5Kh2Y9qE",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGlmaWVyIjoiUExBQ0VIT0xERVIiLCJuYW1lc3BhY2UiOiJNU0EifQ.ml-jzbehHpegvyyNEiwCm_8I1cwScKfSrGaJn3gnNm0",
 											"type": "text"
 										},
 										{
